@@ -14,11 +14,11 @@ import com.bsgresistance.bsgresistance.R;
 
 public class NumberOfPlayers extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_number_of_players);
+
         TextView tudosModuleHeader= findViewById(R.id.tudos_modul_header);
         final GridLayout tudosModuleGrid = findViewById(R.id.tudos_modul_grid);
         tudosModuleHeader.setOnClickListener(new View.OnClickListener() {
@@ -27,6 +27,18 @@ public class NumberOfPlayers extends AppCompatActivity {
                 setModuleVisibility(tudosModuleGrid);
             }
         });
+
+        TextView moralisModuleHeader= findViewById(R.id.moralis_modul_header);
+        final GridLayout moralisModuleGrid = findViewById(R.id.moralis_modul_grid);
+        moralisModuleHeader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setModuleVisibility(moralisModuleGrid);
+            }
+        });
+
+
+
     }
 
     @Override
@@ -50,6 +62,11 @@ public class NumberOfPlayers extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    /**
+     * Set visibility of the selected module. If visible set to hidden. If hidden set to visible
+     * @param moduleGrid
+     */
 
     private void setModuleVisibility(GridLayout moduleGrid ){
         if (moduleGrid.getVisibility()==View.VISIBLE){

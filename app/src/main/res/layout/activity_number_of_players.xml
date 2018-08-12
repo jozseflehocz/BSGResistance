@@ -105,6 +105,62 @@
                 android:rowCount="2">
 
                 <Button
+                    android:id="@+id/gaius_button"
+                    android:layout_gravity="left|top"
+                    android:layout_margin="25dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="15dp"
+                    android:text="Gaius"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/aaron_button"
+                    android:layout_gravity="left|top"
+                    android:layout_margin="25dp"
+                    android:background="@color/colorAccent"
+                    android:padding="15dp"
+                    android:text="Aaron"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/apollo_button"
+                    android:layout_gravity="left|top"
+                    android:layout_margin="25dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="15dp"
+                    android:text="Apolló"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/shelly_button"
+                    android:layout_gravity="left|top"
+                    android:layout_margin="25dp"
+                    android:background="@color/colorAccent"
+                    android:padding="15dp"
+                    android:text="Shelly"
+                    android:textSize="30sp" />
+            </GridLayout>
+            <TextView
+                android:id="@+id/moralis_modul_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:text="Morális modul"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp" />
+            <GridLayout
+                android:id="@+id/moralis_modul_grid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="2">
+
+                <Button
                     android:id="@+id/button1"
                     android:layout_gravity="left|top"
                     android:layout_margin="25dp"
@@ -140,17 +196,6 @@
                     android:text="Shelly"
                     android:textSize="30sp" />
             </GridLayout>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="@color/colorPrimary"
-                android:paddingBottom="5dp"
-                android:paddingLeft="5dp"
-                android:paddingTop="5dp"
-                android:text="Morális modul"
-                android:textColor="@color/colorWhite"
-                android:textSize="30sp" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
