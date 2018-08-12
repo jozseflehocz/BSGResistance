@@ -2,16 +2,14 @@ package com.bsgresistance;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridLayout;
-import android.widget.GridView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bsgresistance.bsgresistance.R;
 
@@ -85,7 +83,7 @@ public class NumberOfPlayers extends AppCompatActivity {
     /**
      * Set visibility of the selected module. If visible set to hidden. If hidden set to visible
      *
-     * @param moduleGrid
+     * @param moduleGrid module where the visibility is set
      */
 
     private void setModuleVisibility(GridLayout moduleGrid) {
@@ -99,10 +97,12 @@ public class NumberOfPlayers extends AppCompatActivity {
     /**
      * Increase or decrease the number of players, and disable enable buttons depending on
      * the current value
-     * @param changeValue
+     * @param changeValue 1, or -1 depends on the button clicked
      */
 
     private void changeNumberOfPlayers(int changeValue) {
+
+        String toastText="";
         EditText numberOfPlayers = findViewById(R.id.number_of_players);
         int currentNumberOfPlayers = Integer.parseInt(numberOfPlayers.getText().toString().trim());
 
@@ -113,9 +113,15 @@ public class NumberOfPlayers extends AppCompatActivity {
 
         if (currentNumberOfPlayers<6) {
             decreaseNumberOfPlayersButton.setEnabled(false);
+            toastText=getString(R.string.minimum_number_of_players_toast);
         }
         if (currentNumberOfPlayers>11) {
             increaseNumberOfPlayersButton.setEnabled(false);
+            toastText=getString(R.string.maximum_number_of_players_toast);
+        }
+
+        if (toastText.length()>0){
+            Toast.makeText(this, toastText, Toast.LENGTH_SHORT).show();
         }
 
     }

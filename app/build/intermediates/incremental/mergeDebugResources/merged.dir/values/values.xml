@@ -625,6 +625,8 @@
     <string name="app_name">BSG Resistance</string>
     <string name="decrease_button_label">-</string>
     <string name="increase_button_label">+</string>
+    <string name="maximum_number_of_players_toast">Maximum 12 fő játszhat</string>
+    <string name="minimum_number_of_players_toast">Minimum 5 fő szükséges a játékhoz</string>
     <string name="number_of_players">Létszám</string>
     <string name="number_of_players_default_value">8</string>
     <string name="search_menu_title">Search</string>

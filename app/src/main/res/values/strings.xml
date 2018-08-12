@@ -5,4 +5,6 @@
     <string name="number_of_players_default_value">8</string>
     <string name="increase_button_label">+</string>
     <string name="action_start_game">Mehet</string>
+    <string name="minimum_number_of_players_toast">Minimum 5 fő szükséges a játékhoz</string>
+    <string name="maximum_number_of_players_toast">Maximum 12 fő játszhat</string>
 </resources>
