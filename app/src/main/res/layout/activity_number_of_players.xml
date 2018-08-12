@@ -31,8 +31,8 @@
                     android:id="@+id/number_of_players"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:editable="false"
-                    android:text="@string/number_of_players_default_value" />
+                    android:inputType="text"
+                    android:editable="false"/>
 
                 <Button
                     android:id="@+id/increase_number_of_players"
@@ -54,25 +54,25 @@
                     android:layout_margin="5dp"
                     android:padding="20dp"
                     android:background="@color/colorPrimary"
-                    android:text="Sima 3"
+                    android:text="Ember"
                     android:textSize="30sp" />
 
                 <TextView
+                    android:id="@+id/number_of_human_players"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:background="@color/colorPrimary"
                     android:padding="5dp"
-                    android:text="5"
                     android:textSize="25sp" />
 
                 <TextView
+                    android:id="@+id/number_of_cylon_players"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:background="@color/colorAccent"
                     android:padding="5dp"
-                    android:text="3"
                     android:textSize="25sp" />
 
                 <Button
@@ -81,7 +81,7 @@
                     android:layout_margin="5dp"
                     android:padding="20dp"
                     android:background="@color/colorAccent"
-                    android:text="Sima 2"
+                    android:text="Cylon"
                     android:textSize="30sp" />
             </LinearLayout>
 

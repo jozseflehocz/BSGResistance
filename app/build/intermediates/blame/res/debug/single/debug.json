@@ -332,6 +332,10 @@
         "source": "/home/jlehocz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b07f39ae8c0e35802942f6a03731c9db/res/drawable-xxxhdpi-v4/abc_ic_star_black_16dp.png"
     },
     {
+        "merged": "/media/jlehocz/Seagate/android/BSGResistance/app/build/intermediates/res/merged/debug/raw_mindenki.mp3.flat",
+        "source": "/media/jlehocz/Seagate/android/BSGResistance/app/src/main/res/raw/mindenki.mp3"
+    },
+    {
         "merged": "/media/jlehocz/Seagate/android/BSGResistance/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_star_black_16dp.png.flat",
         "source": "/home/jlehocz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b07f39ae8c0e35802942f6a03731c9db/res/drawable-mdpi-v4/abc_ic_star_black_16dp.png"
     },

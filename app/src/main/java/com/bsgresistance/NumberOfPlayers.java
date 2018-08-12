@@ -18,6 +18,14 @@ public class NumberOfPlayers extends AppCompatActivity {
     Button increaseNumberOfPlayersButton;
     Button decreaseNumberOfPlayersButton;
 
+    TextView numberOfHumanPlayersView;
+    TextView numberOfCylonPlayersView;
+
+    private int mNumberOfPlayers;
+    private int mNumberOfHumanPlayers;
+    private int mNumberOfCylonPlayers;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +49,8 @@ public class NumberOfPlayers extends AppCompatActivity {
             }
         });
 
+        mNumberOfPlayers=Integer.parseInt(getString(R.string.number_of_players_default_value));
+
         increaseNumberOfPlayersButton = findViewById(R.id.increase_number_of_players);
         increaseNumberOfPlayersButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +66,12 @@ public class NumberOfPlayers extends AppCompatActivity {
                 changeNumberOfPlayers(-1);
             }
         });
+
+        numberOfHumanPlayersView=findViewById(R.id.number_of_human_players);
+        numberOfCylonPlayersView=findViewById(R.id.number_of_cylon_players);
+
+        setNumberOfPlayers();
+        changeNumberOfPlayers(0);
     }
 
     @Override
@@ -104,18 +120,20 @@ public class NumberOfPlayers extends AppCompatActivity {
 
         String toastText="";
         EditText numberOfPlayers = findViewById(R.id.number_of_players);
-        int currentNumberOfPlayers = Integer.parseInt(numberOfPlayers.getText().toString().trim());
+        if (!numberOfPlayers.getText().toString().isEmpty()) {
+            mNumberOfPlayers = Integer.parseInt(numberOfPlayers.getText().toString().trim());
+        }
 
         decreaseNumberOfPlayersButton.setEnabled(true);
         increaseNumberOfPlayersButton.setEnabled(true);
-        currentNumberOfPlayers = currentNumberOfPlayers+changeValue;
-        numberOfPlayers.setText(String.valueOf(currentNumberOfPlayers));
+        mNumberOfPlayers = mNumberOfPlayers+changeValue;
+        numberOfPlayers.setText(String.valueOf(mNumberOfPlayers));
 
-        if (currentNumberOfPlayers<6) {
+        if (mNumberOfPlayers<6) {
             decreaseNumberOfPlayersButton.setEnabled(false);
             toastText=getString(R.string.minimum_number_of_players_toast);
         }
-        if (currentNumberOfPlayers>11) {
+        if (mNumberOfPlayers>11) {
             increaseNumberOfPlayersButton.setEnabled(false);
             toastText=getString(R.string.maximum_number_of_players_toast);
         }
@@ -124,5 +142,51 @@ public class NumberOfPlayers extends AppCompatActivity {
             Toast.makeText(this, toastText, Toast.LENGTH_SHORT).show();
         }
 
+        setNumberOfPlayers();
+
+    }
+
+    private void setNumberOfPlayers() {
+
+        switch (mNumberOfPlayers) {
+            case 5:
+                mNumberOfHumanPlayers = 3;
+                mNumberOfCylonPlayers = 2;
+                break;
+            case 6:
+                mNumberOfHumanPlayers = 4;
+                mNumberOfCylonPlayers = 2;
+                break;
+            case 7:
+                mNumberOfHumanPlayers = 4;
+                mNumberOfCylonPlayers = 3;
+                break;
+            case 8:
+                mNumberOfHumanPlayers = 5;
+                mNumberOfCylonPlayers = 3;
+                break;
+            case 9:
+                mNumberOfHumanPlayers = 6;
+                mNumberOfCylonPlayers = 3;
+                break;
+            case 10:
+                mNumberOfHumanPlayers = 6;
+                mNumberOfCylonPlayers = 4;
+                break;
+            case 11:
+                mNumberOfHumanPlayers = 7;
+                mNumberOfCylonPlayers = 4;
+                break;
+            default:
+                mNumberOfHumanPlayers = 8;
+                mNumberOfCylonPlayers = 4;
+        }
+
+        setPlayerFields();
+    }
+
+    private void setPlayerFields(){
+        numberOfHumanPlayersView.setText(Integer.toString(mNumberOfHumanPlayers));
+        numberOfCylonPlayersView.setText(Integer.toString(mNumberOfCylonPlayers));
     }
 }
