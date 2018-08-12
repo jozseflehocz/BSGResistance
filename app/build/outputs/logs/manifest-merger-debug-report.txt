@@ -1,0 +1,103 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:2:1-21:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b07f39ae8c0e35802942f6a03731c9db/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/232d2ee308aa848026866f9be4a357c7/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/f31d496ff631dd18eba4046e66f90636/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/0cf52692df53d870a0523d123f85e147/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/6676078fd2c01f625cafe6bd26790767/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/625e34f48766c1b6041eb59cd51fcd6e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/e8a82dc98c48bd84ec5e22d05e5a4af6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/750760035c04e374c0b8c8d2ba0afa9b/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/ae27a221d32de2c536a5814c4ecf85f1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/2dbec3e4d8ea834ed9c099f88eb10974/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/f048d63ae14d4a8ad12bd420dfa8fdd0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/00fa988990f87eecaa4c2cf41a3e7c0d/AndroidManifest.xml:17:1-22:12
+INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:2:1-21:12
+	package
+		ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:3:5-46
+		INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml
+		INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml
+		ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:2:1-21:12
+		INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml
+		ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:2:1-21:12
+		INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:5:5-19:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/232d2ee308aa848026866f9be4a357c7/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/232d2ee308aa848026866f9be4a357c7/AndroidManifest.xml:9:5-20
+	android:supportsRtl
+		ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:8:9-50
+	android:roundIcon
+		ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:11:9-40
+activity#com.bsgresistance.NumberOfPlayers
+ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:12:19-67
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:16:27-74
+uses-sdk
+INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml
+INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b07f39ae8c0e35802942f6a03731c9db/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b07f39ae8c0e35802942f6a03731c9db/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/232d2ee308aa848026866f9be4a357c7/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/232d2ee308aa848026866f9be4a357c7/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/f31d496ff631dd18eba4046e66f90636/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/f31d496ff631dd18eba4046e66f90636/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/0cf52692df53d870a0523d123f85e147/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/0cf52692df53d870a0523d123f85e147/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/6676078fd2c01f625cafe6bd26790767/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/6676078fd2c01f625cafe6bd26790767/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/625e34f48766c1b6041eb59cd51fcd6e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/625e34f48766c1b6041eb59cd51fcd6e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/e8a82dc98c48bd84ec5e22d05e5a4af6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/e8a82dc98c48bd84ec5e22d05e5a4af6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/750760035c04e374c0b8c8d2ba0afa9b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/750760035c04e374c0b8c8d2ba0afa9b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/ae27a221d32de2c536a5814c4ecf85f1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/ae27a221d32de2c536a5814c4ecf85f1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/2dbec3e4d8ea834ed9c099f88eb10974/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/2dbec3e4d8ea834ed9c099f88eb10974/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/f048d63ae14d4a8ad12bd420dfa8fdd0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/f048d63ae14d4a8ad12bd420dfa8fdd0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/00fa988990f87eecaa4c2cf41a3e7c0d/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/00fa988990f87eecaa4c2cf41a3e7c0d/AndroidManifest.xml:20:5-44
+INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml
+INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml
+		ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml
+		INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml
+		ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml
+		INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml

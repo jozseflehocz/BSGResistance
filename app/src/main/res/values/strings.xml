@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BSG Resistance</string>
+    <string name="number_of_players">Létszám</string>
+    <string name="decrease_button_label">-</string>
+    <string name="number_of_players_default_value">8</string>
+    <string name="increase_button_label">+</string>
+    <string name="action_start_game">Mehet</string>
+</resources>
