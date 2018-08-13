@@ -27,12 +27,10 @@
                     android:layout_height="wrap_content"
                     android:text="@string/decrease_button_label" />
 
-                <EditText
+                <TextView
                     android:id="@+id/number_of_players"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:editable="false"/>
+                    android:layout_height="wrap_content"/>
 
                 <Button
                     android:id="@+id/increase_number_of_players"
@@ -49,13 +47,11 @@
                 android:gravity="center_horizontal">
 
                 <Button
+                    style="@style/PlayerButton.HumanButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:padding="20dp"
-                    android:background="@color/colorPrimary"
-                    android:text="Ember"
-                    android:textSize="30sp" />
+                    android:text="Ember"/>
 
                 <TextView
                     android:id="@+id/number_of_human_players"
@@ -76,13 +72,11 @@
                     android:textSize="25sp" />
 
                 <Button
+                    style="@style/PlayerButton.CylonButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:padding="20dp"
-                    android:background="@color/colorAccent"
-                    android:text="Cylon"
-                    android:textSize="30sp" />
+                    android:text="Cylon" />
             </LinearLayout>
 
             <TextView
@@ -94,7 +88,7 @@
                 android:paddingBottom="5dp"
                 android:paddingLeft="5dp"
                 android:paddingTop="5dp"
-                android:text="Tudós modul"
+                android:text="Tudós"
                 android:textColor="@color/colorWhite"
                 android:textSize="30sp" />
 
@@ -107,43 +101,49 @@
                 android:rowCount="2">
 
                 <Button
+                    style="@style/PlayerButton.HumanButton"
+                    android:id="@+id/asha_janik_button"
+                    android:layout_gravity="left|top"
+                    android:layout_margin="25dp"
+                    android:text="Asha\nJanik"/>
+
+                <Button
+                    style="@style/PlayerButton.CylonButton"
+                    android:id="@+id/d_anna_biers_button"
+                    android:layout_gravity="left|top"
+                    android:layout_margin="25dp"
+                    android:text="D'anna\nBiers"/>
+
+                <Button
+                    style="@style/PlayerButton.HumanButton"
                     android:id="@+id/gaius_button"
                     android:layout_gravity="left|top"
                     android:layout_margin="25dp"
-                    android:background="@color/colorPrimary"
-                    android:padding="15dp"
-                    android:text="Gaius"
-                    android:textSize="30sp" />
+                    android:text="Gaius\nBaltar"/>
 
                 <Button
+                    style="@style/PlayerButton.CylonButton"
                     android:id="@+id/aaron_button"
                     android:layout_gravity="left|top"
                     android:layout_margin="25dp"
-                    android:background="@color/colorAccent"
-                    android:padding="15dp"
-                    android:text="Aaron"
-                    android:textSize="30sp" />
+                    android:text="Aaron\nDoral"/>
 
                 <Button
+                    style="@style/PlayerButton.HumanButton"
                     android:id="@+id/apollo_button"
                     android:layout_gravity="left|top"
                     android:layout_margin="25dp"
-                    android:background="@color/colorPrimary"
-                    android:padding="15dp"
-                    android:text="Apolló"
-                    android:textSize="30sp" />
+                    android:text="Lee\n'Apollo'\nAdama"/>
 
                 <Button
+                    style="@style/PlayerButton.CylonButton"
                     android:id="@+id/shelly_button"
                     android:layout_gravity="left|top"
                     android:layout_margin="25dp"
-                    android:background="@color/colorAccent"
-                    android:padding="15dp"
-                    android:text="Shelly"
-                    android:textSize="30sp" />
+                    android:text="Shelly\nGodfrey"/>
             </GridLayout>
             <TextView
-                android:id="@+id/moralis_modul_header"
+                android:id="@+id/disszidens_modul_header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -151,52 +151,105 @@
                 android:paddingBottom="5dp"
                 android:paddingLeft="5dp"
                 android:paddingTop="5dp"
-                android:text="Morális modul"
+                android:text="Disszidens"
                 android:textColor="@color/colorWhite"
                 android:textSize="30sp" />
             <GridLayout
-                android:id="@+id/moralis_modul_grid"
+                android:id="@+id/disszidens_modul_grid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:columnCount="2"
                 android:orientation="horizontal"
-                android:rowCount="2">
+                android:rowCount="1">
 
                 <Button
-                    android:id="@+id/button1"
+                    style="@style/PlayerButton.HumanButton"
+                    android:id="@+id/sharon_boomer_valerii_button"
                     android:layout_gravity="left|top"
                     android:layout_margin="25dp"
-                    android:background="@color/colorPrimary"
-                    android:padding="15dp"
-                    android:text="Gaius"
-                    android:textSize="30sp" />
+                    android:text="Sharon\n'Boomer'\nValerii"/>
 
                 <Button
-                    android:id="@+id/button2"
+                    style="@style/PlayerButton.CylonButton"
+                    android:id="@+id/sharon_athena_valerii_button"
                     android:layout_gravity="left|top"
                     android:layout_margin="25dp"
-                    android:background="@color/colorAccent"
-                    android:padding="15dp"
-                    android:text="Aaron"
-                    android:textSize="30sp" />
+                    android:text="Sharon\n'Athena'\nValerii"/>
+            </GridLayout>
+            <TextView
+                android:id="@+id/vezeto_modul_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:text="Vezető"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp" />
+            <GridLayout
+                android:id="@+id/vezeto_modul_grid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="4">
 
                 <Button
-                    android:id="@+id/button3"
+                    style="@style/PlayerButton.HumanButton"
+                    android:id="@+id/viliem_adama_button"
                     android:layout_gravity="left|top"
                     android:layout_margin="25dp"
-                    android:background="@color/colorPrimary"
-                    android:padding="15dp"
-                    android:text="Apolló"
-                    android:textSize="30sp" />
+                    android:text="Wiliem\nAdama"/>
 
                 <Button
-                    android:id="@+id/button4"
+                    style="@style/PlayerButton.HumanButton"
+                    android:id="@+id/laura_roslin_button"
                     android:layout_gravity="left|top"
                     android:layout_margin="25dp"
-                    android:background="@color/colorAccent"
-                    android:padding="15dp"
-                    android:text="Shelly"
-                    android:textSize="30sp" />
+                    android:text="Laura\nRoslin"/>
+
+                <Button
+                    style="@style/PlayerButton.HumanButton"
+                    android:id="@+id/samuel_t_anders_button"
+                    android:layout_gravity="left|top"
+                    android:layout_margin="25dp"
+                    android:text="Samuel T.\nAnders"/>
+
+                <Button
+                    style="@style/PlayerButton.HumanButton"
+                    android:id="@+id/billy_keikea_button"
+                    android:layout_gravity="left|top"
+                    android:layout_margin="25dp"
+                    android:text="Billy\nKeiKeya"/>
+                <Button
+                    style="@style/PlayerButton.HumanButton"
+                    android:id="@+id/tom_zarek_button"
+                    android:layout_gravity="left|top"
+                    android:layout_margin="25dp"
+                    android:text="Tom\nZarek"/>
+
+                <Button
+                    style="@style/PlayerButton.CylonButton"
+                    android:id="@+id/john_cavil_galactica_button"
+                    android:layout_gravity="left|top"
+                    android:layout_margin="25dp"
+                    android:text="John\nCavil\n(Galactica)"/>
+
+                <Button
+                    style="@style/PlayerButton.CylonButton"
+                    android:id="@+id/john_cavil_caprica_button"
+                    android:layout_gravity="left|top"
+                    android:layout_margin="25dp"
+                    android:text="John\nCavil\n(Caprica)"/>
+
+                <Button
+                    style="@style/PlayerButton.CylonButton"
+                    android:id="@+id/tory_foster_button"
+                    android:layout_gravity="left|top"
+                    android:layout_margin="25dp"
+                    android:text="Tory\nFoster"/>
             </GridLayout>
         </LinearLayout>
     </ScrollView>

@@ -18,6 +18,7 @@ public class NumberOfPlayers extends AppCompatActivity {
     Button increaseNumberOfPlayersButton;
     Button decreaseNumberOfPlayersButton;
 
+    TextView numberOfPlayersView;
     TextView numberOfHumanPlayersView;
     TextView numberOfCylonPlayersView;
 
@@ -40,12 +41,21 @@ public class NumberOfPlayers extends AppCompatActivity {
             }
         });
 
-        TextView moralisModuleHeader = findViewById(R.id.moralis_modul_header);
-        final GridLayout moralisModuleGrid = findViewById(R.id.moralis_modul_grid);
-        moralisModuleHeader.setOnClickListener(new View.OnClickListener() {
+        TextView disszidensModuleHeader = findViewById(R.id.disszidens_modul_header);
+        final GridLayout disszidensModuleGrid = findViewById(R.id.disszidens_modul_grid);
+        disszidensModuleHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setModuleVisibility(moralisModuleGrid);
+                setModuleVisibility(disszidensModuleGrid);
+            }
+        });
+
+        TextView vezetoModuleHeader = findViewById(R.id.vezeto_modul_header);
+        final GridLayout vezetoModuleGrid = findViewById(R.id.vezeto_modul_grid);
+        vezetoModuleHeader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setModuleVisibility(vezetoModuleGrid);
             }
         });
 
@@ -67,6 +77,7 @@ public class NumberOfPlayers extends AppCompatActivity {
             }
         });
 
+        numberOfPlayersView=findViewById(R.id.number_of_players);
         numberOfHumanPlayersView=findViewById(R.id.number_of_human_players);
         numberOfCylonPlayersView=findViewById(R.id.number_of_cylon_players);
 
@@ -119,15 +130,15 @@ public class NumberOfPlayers extends AppCompatActivity {
     private void changeNumberOfPlayers(int changeValue) {
 
         String toastText="";
-        EditText numberOfPlayers = findViewById(R.id.number_of_players);
-        if (!numberOfPlayers.getText().toString().isEmpty()) {
-            mNumberOfPlayers = Integer.parseInt(numberOfPlayers.getText().toString().trim());
+
+        if (!numberOfPlayersView.getText().toString().isEmpty()) {
+            mNumberOfPlayers = Integer.parseInt(numberOfPlayersView.getText().toString().trim());
         }
 
         decreaseNumberOfPlayersButton.setEnabled(true);
         increaseNumberOfPlayersButton.setEnabled(true);
         mNumberOfPlayers = mNumberOfPlayers+changeValue;
-        numberOfPlayers.setText(String.valueOf(mNumberOfPlayers));
+        numberOfPlayersView.setText(String.valueOf(mNumberOfPlayers));
 
         if (mNumberOfPlayers<6) {
             decreaseNumberOfPlayersButton.setEnabled(false);
