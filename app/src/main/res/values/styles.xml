@@ -8,17 +8,64 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="NumberText">
+        <!-- ToDo mi kell a számjegy középreigazításához? -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:width">45dp</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="ModulHeaderText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="ModulHeaderText.Item">
+        <item name="android:background">@color/colorItem</item>
+    </style>
+
     <style name="PlayerButton">
+        <item name="android:layout_gravity">left|top</item>
+        <item name="android:layout_margin">25dp</item>
         <item name="android:padding">20dp</item>
+        <item name="android:width">160dp</item>
+        <!--ToDo<item name="android:height">Az egységes magaságot szeretnék elérni
+        de azt úgy tűnik nem így lehet</item>-->
         <item name="android:textSize">20sp</item>
     </style>
 
     <style name="PlayerButton.HumanButton">
-        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:background">@color/colorHuman</item>
+    </style>
+
+    <style name="PlayerButton.WeekHumanButton">
+        <item name="android:background">@color/colorLightHuman</item>
     </style>
 
     <style name="PlayerButton.CylonButton">
-        <item name="android:background">@color/colorAccent</item>
+        <item name="android:background">@color/colorCylon</item>
+    </style>
+
+    <style name="PlayerButton.EasyCylonButton">
+        <item name="android:background">@color/colorLightCylon</item>
+    </style>
+
+    <style name="PlayerButton.HardCylonButton">
+        <item name="android:background">@color/colorDarkCylon</item>
+    </style>
+
+    <style name="PlayerButton.ItemButton">
+        <item name="android:background">@color/colorItem</item>
     </style>
 
 </resources>
