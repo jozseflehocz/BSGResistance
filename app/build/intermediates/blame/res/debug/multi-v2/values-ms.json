@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "/media/jlehocz/Seagate/android/BSGResistance/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ms/values-ms.xml",
+            "outputFile": "C:\\Users\\Sulugy\\AndroidStudioProjects\\BSGResistance\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ms\\values-ms.xml",
             "map": [
                 {
-                    "source": "/home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/750760035c04e374c0b8c8d2ba0afa9b/res/values-ms/values-ms.xml",
+                    "source": "C:\\Users\\Sulugy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\0c0ca0dfd1cae9a7f84725f65ac13546\\res\\values-ms\\values-ms.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,216,321,429,516,620,731,809,888,968,1080,1189,1286,1395,1498,1605,1764,1865",
+                        "endColumns": "110,104,107,86,103,110,77,78,79,111,108,96,108,102,106,158,100,79",
+                        "endOffsets": "211,316,424,511,615,726,804,883,963,1075,1184,1281,1390,1493,1600,1759,1860,1940"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Sulugy\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\ebc907477ad4e5b67a93257a79a05d52\\res\\values-ms\\values-ms.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -18,16 +28,6 @@
                         "startOffsets": "1945",
                         "endColumns": "100",
                         "endOffsets": "2041"
-                    }
-                },
-                {
-                    "source": "/home/jlehocz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b07f39ae8c0e35802942f6a03731c9db/res/values-ms/values-ms.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,216,321,429,516,620,731,809,888,968,1080,1189,1286,1395,1498,1605,1764,1865",
-                        "endColumns": "110,104,107,86,103,110,77,78,79,111,108,96,108,102,106,158,100,79",
-                        "endOffsets": "211,316,424,511,615,726,804,883,963,1075,1184,1281,1390,1493,1600,1759,1860,1940"
                     }
                 }
             ]

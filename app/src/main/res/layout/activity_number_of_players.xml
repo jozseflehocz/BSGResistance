@@ -25,75 +25,41 @@
                     android:id="@+id/decrease_number_of_players"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/decrease_button_label" />
+                    android:text="@string/decrease_button_label"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:id="@+id/number_of_human_players"
+                    style="@style/NumberText"
+                    android:background="@color/colorHuman" />
 
                 <TextView
                     android:id="@+id/number_of_players"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    style="@style/NumberText"
+                    android:background="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/number_of_cylon_players"
+                    style="@style/NumberText"
+                    android:background="@color/colorCylon" />
 
                 <Button
                     android:id="@+id/increase_number_of_players"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/increase_button_label" />
+                    android:text="@string/increase_button_label"
+                    android:textSize="35sp" />
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:gravity="center_horizontal">
-
-                <Button
-                    style="@style/PlayerButton.HumanButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="Ember"/>
-
-                <TextView
-                    android:id="@+id/number_of_human_players"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:background="@color/colorPrimary"
-                    android:padding="5dp"
-                    android:textSize="25sp" />
-
-                <TextView
-                    android:id="@+id/number_of_cylon_players"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:background="@color/colorAccent"
-                    android:padding="5dp"
-                    android:textSize="25sp" />
-
-                <Button
-                    style="@style/PlayerButton.CylonButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="Cylon" />
             </LinearLayout>
 
             <TextView
-                android:id="@+id/tudos_modul_header"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:background="@color/colorPrimary"
-                android:paddingBottom="5dp"
-                android:paddingLeft="5dp"
-                android:paddingTop="5dp"
-                android:text="Tudós"
-                android:textColor="@color/colorWhite"
-                android:textSize="30sp" />
-
+                style="@style/ModulHeaderText"
+                android:id="@+id/alap_modul_header"
+                android:text="Alap Modul" />
+            <!--ToDo Az általma iderakot modultokat nem lehet összehúzni, ami ide pont jó
+            de a többi modulnál meg nem jó...-->
             <GridLayout
-                android:id="@+id/tudos_modul_grid"
+                android:id="@+id/alap_modul_grid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:columnCount="2"
@@ -102,92 +68,67 @@
 
                 <Button
                     style="@style/PlayerButton.HumanButton"
-                    android:id="@+id/asha_janik_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Asha\nJanik"/>
+                    android:id="@+id/simple_human_button"
+                    android:text="E" />
+                <!--ToDo Ez egy szám, ami a @+id/number_of_human_players minusz a bejelölt emberi karakterek száma-->
 
                 <Button
                     style="@style/PlayerButton.CylonButton"
-                    android:id="@+id/d_anna_biers_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="D'anna\nBiers"/>
+                    android:id="@+id/simple_cylon_button"
+                    android:text="C" />
+                <!--ToDo Ez egy szám, ami a @+id/number_of_human_players minusz a bejelölt emberi karakterek száma-->
 
-                <Button
-                    style="@style/PlayerButton.HumanButton"
-                    android:id="@+id/gaius_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Gaius\nBaltar"/>
 
-                <Button
-                    style="@style/PlayerButton.CylonButton"
-                    android:id="@+id/aaron_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Aaron\nDoral"/>
-
-                <Button
-                    style="@style/PlayerButton.HumanButton"
-                    android:id="@+id/apollo_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Lee\n'Apollo'\nAdama"/>
-
-                <Button
-                    style="@style/PlayerButton.CylonButton"
-                    android:id="@+id/shelly_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Shelly\nGodfrey"/>
             </GridLayout>
+
             <TextView
-                android:id="@+id/disszidens_modul_header"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="@color/colorPrimary"
-                android:paddingBottom="5dp"
-                android:paddingLeft="5dp"
-                android:paddingTop="5dp"
-                android:text="Disszidens"
-                android:textColor="@color/colorWhite"
-                android:textSize="30sp" />
+                style="@style/ModulHeaderText"
+                android:id="@+id/tudos_modul_header"
+                android:text="Tudós Modul" />
             <GridLayout
-                android:id="@+id/disszidens_modul_grid"
+                android:id="@+id/tudos_modul_grid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:columnCount="2"
                 android:orientation="horizontal"
-                android:rowCount="1">
+                android:rowCount="3">
 
                 <Button
                     style="@style/PlayerButton.HumanButton"
-                    android:id="@+id/sharon_boomer_valerii_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Sharon\n'Boomer'\nValerii"/>
+                    android:id="@+id/gaius_button"
+                    android:text="Gaius Baltar"/>
 
                 <Button
                     style="@style/PlayerButton.CylonButton"
-                    android:id="@+id/sharon_athena_valerii_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Sharon\n'Athena'\nValerii"/>
+                    android:id="@+id/aaron_button"
+                    android:text="Aaron Doral"/>
+
+                <Button
+                    style="@style/PlayerButton.HumanButton"
+                    android:id="@+id/apollo_button"
+                    android:text="'Apollo'\nLee Adama"/>
+
+                <Button
+                    style="@style/PlayerButton.CylonButton"
+                    android:id="@+id/shelly_button"
+                    android:text="Shelly Godfrey"/>
+
+                <Button
+                    style="@style/PlayerButton.EasyCylonButton"
+                    android:id="@+id/asha_button"
+                    android:text="Asha Janik"/>
+
+                <Button
+                    style="@style/PlayerButton.HardCylonButton"
+                    android:id="@+id/danna_button"
+                    android:text="D'anna Biers"/>
+
             </GridLayout>
+
             <TextView
+                style="@style/ModulHeaderText"
                 android:id="@+id/vezeto_modul_header"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="@color/colorPrimary"
-                android:paddingBottom="5dp"
-                android:paddingLeft="5dp"
-                android:paddingTop="5dp"
-                android:text="Vezető"
-                android:textColor="@color/colorWhite"
-                android:textSize="30sp" />
+                android:text="Vezető modul" />
             <GridLayout
                 android:id="@+id/vezeto_modul_grid"
                 android:layout_width="wrap_content"
@@ -198,59 +139,255 @@
 
                 <Button
                     style="@style/PlayerButton.HumanButton"
-                    android:id="@+id/viliem_adama_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Wiliem\nAdama"/>
+                    android:id="@+id/williem_button"
+                    android:text="Williem Adama"/>
+
+                <Button
+                    style="@style/PlayerButton.CylonButton"
+                    android:id="@+id/cavil_b_button"
+                    android:text="John Cavil\n(Galaktica)"/>
 
                 <Button
                     style="@style/PlayerButton.HumanButton"
-                    android:id="@+id/laura_roslin_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Laura\nRoslin"/>
+                    android:id="@+id/laura_button"
+                    android:text="Laura Roslin"/>
+
+                <Button
+                    style="@style/PlayerButton.CylonButton"
+                    android:id="@+id/john_cavil_a_button"
+                    android:text="John Cavil\n(Caprica)"/>
 
                 <Button
                     style="@style/PlayerButton.HumanButton"
-                    android:id="@+id/samuel_t_anders_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Samuel T.\nAnders"/>
+                    android:id="@+id/samuel_button"
+                    android:text="Samuel T. Anders"/>
 
                 <Button
-                    style="@style/PlayerButton.HumanButton"
-                    android:id="@+id/billy_keikea_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Billy\nKeiKeya"/>
+                    style="@style/PlayerButton.CylonButton"
+                    android:id="@+id/tory_button"
+                    android:text="Tory Foster"/>
+
                 <Button
-                    style="@style/PlayerButton.HumanButton"
+                    style="@style/PlayerButton.WeekHumanButton"
                     android:id="@+id/tom_zarek_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Tom\nZarek"/>
+                    android:text="Tom Zarek"/>
 
                 <Button
-                    style="@style/PlayerButton.CylonButton"
-                    android:id="@+id/john_cavil_galactica_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="John\nCavil\n(Galactica)"/>
+                    style="@style/PlayerButton.WeekHumanButton"
+                    android:id="@+id/billy_keikea_button"
+                    android:text="Billy KeiKeya"/>
 
-                <Button
-                    style="@style/PlayerButton.CylonButton"
-                    android:id="@+id/john_cavil_caprica_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="John\nCavil\n(Caprica)"/>
-
-                <Button
-                    style="@style/PlayerButton.CylonButton"
-                    android:id="@+id/tory_foster_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Tory\nFoster"/>
             </GridLayout>
+
+            <TextView
+                style="@style/ModulHeaderText"
+                android:id="@+id/disszidens_modul_header"
+                android:text="Disszidens modul" />
+            <GridLayout
+                android:id="@+id/disszidens_modul_grid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="1">
+
+                <Button
+                    style="@style/PlayerButton.HumanButton"
+                    android:id="@+id/boomer_button"
+                    android:text="'Boomer'\nSharon Valerii"/>
+
+                <Button
+                    style="@style/PlayerButton.CylonButton"
+                    android:id="@+id/athena_button"
+                    android:text="'Athena'\nSharon Valerii"/>
+            </GridLayout>
+
+            <TextView
+                style="@style/ModulHeaderText"
+                android:id="@+id/moral_modul_header"
+                android:text="Morális modul" />
+            <GridLayout
+                android:id="@+id/moral_modul_grid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="1">
+
+                <Button
+                    style="@style/PlayerButton.HumanButton"
+                    android:id="@+id/helo_button"
+                    android:text="'Helo'\nKarl Agaton"/>
+
+                <Button
+                    style="@style/PlayerButton.CylonButton"
+                    android:id="@+id/simon_button"
+                    android:text="Simon O'neill"/>
+            </GridLayout>
+
+            <TextView
+                style="@style/ModulHeaderText"
+                android:id="@+id/hit_modul_header"
+                android:text="Hitehagyott modul" />
+            <GridLayout
+                android:id="@+id/hit_modul_grid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="1">
+
+                <Button
+                    style="@style/PlayerButton.HumanButton"
+                    android:id="@+id/elosha_button"
+                    android:text="Elosha Tiszteletes"/>
+
+                <Button
+                    style="@style/PlayerButton.CylonButton"
+                    android:id="@+id/daniel_button"
+                    android:text="Daniell #8"/>
+            </GridLayout>
+
+            <TextView
+                style="@style/ModulHeaderText"
+                android:id="@+id/familiar_modul_header"
+                android:text="Ismerősök modul" />
+            <GridLayout
+                android:id="@+id/familiar_modul_grid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="2">
+
+                <Button
+                    style="@style/PlayerButton.WeekHumanButton"
+                    android:id="@+id/cally_button"
+                    android:text="Cally Tyrol"/>
+
+                <Button
+                    style="@style/PlayerButton.WeekHumanButton"
+                    android:id="@+id/galen_button"
+                    android:text="Galen Tyrol"/>
+
+                <Button
+                    style="@style/PlayerButton.HumanButton"
+                    android:id="@+id/saul_button"
+                    android:text="Saul Tight"/>
+
+                <Button
+                    style="@style/PlayerButton.CylonButton"
+                    android:id="@+id/ellen_button"
+                    android:text="Ellen Tight"/>
+            </GridLayout>
+
+            <TextView
+                style="@style/ModulHeaderText"
+                android:id="@+id/extra_modul_header"
+                android:text="Egyedi célok modul" />
+            <GridLayout
+                android:id="@+id/extra_modul_grid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="4">
+
+                <Button
+                    style="@style/PlayerButton.HumanButton"
+                    android:id="@+id/starbuck_button"
+                    android:text="'Starbuck'\nKara Thrace"/>
+                <Button
+                    style="@style/PlayerButton.CylonButton"
+                    android:id="@+id/leoben_button"
+                    android:text="Leoben Conoy"/>
+
+                <Button
+                    style="@style/PlayerButton.HumanButton"
+                    android:id="@+id/felix_button"
+                    android:text="Felix Gaeta"/>
+
+                <Button
+                    style="@style/PlayerButton.HumanButton"
+                    android:id="@+id/helen_button"
+                    android:text="Helen Kain"/>
+
+                <Button
+                    style="@style/PlayerButton.HumanButton"
+                    android:id="@+id/dee_button"
+                    android:text="'Dee'\nAnastasia Dualla"/>
+
+                <Button
+                    style="@style/PlayerButton.HumanButton"
+                    android:id="@+id/kendra_button"
+                    android:text="Kendra Shaw"/>
+
+                <Button
+                    style="@style/PlayerButton.HumanButton"
+                    android:id="@+id/sherman_button"
+                    android:text="Dr. Sherman Cottle"/>
+
+                <Button
+                    style="@style/PlayerButton.HumanButton"
+                    android:id="@+id/romo_button"
+                    android:text="Romo Lampkin"/>
+
+            </GridLayout>
+
+            <TextView
+                style="@style/ModulHeaderText.Item"
+                android:id="@+id/detector_modul_header"
+                android:text="Cylon detector modul" />
+            <GridLayout
+                android:id="@+id/detektor_modul_grid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:orientation="horizontal"
+                android:rowCount="1">
+
+                <Button
+                    style="@style/PlayerButton.ItemButton"
+                    android:id="@+id/detector_button"
+                    android:text="Cylon Detector"/>
+            </GridLayout>
+
+            <TextView
+                style="@style/ModulHeaderText.Item"
+                android:id="@+id/segant_modul_header"
+                android:text="Felderítő modul" />
+            <GridLayout
+                android:id="@+id/sergant_modul_grid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:orientation="horizontal"
+                android:rowCount="1">
+
+                <Button
+                    style="@style/PlayerButton.ItemButton"
+                    android:id="@+id/sergant_button"
+                    android:text="Felderítő"/>
+            </GridLayout>
+
+            <TextView
+                style="@style/ModulHeaderText.Item"
+                android:id="@+id/plot_modul_header"
+                android:text="A Terv modul" />
+            <GridLayout
+                android:id="@+id/plot_modul_grid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:orientation="horizontal"
+                android:rowCount="1">
+
+                <Button
+                    style="@style/PlayerButton.ItemButton"
+                    android:id="@+id/plot_button"
+                    android:text="A Terv"/>
+            </GridLayout>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

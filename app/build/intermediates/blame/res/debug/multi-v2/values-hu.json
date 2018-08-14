@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "/media/jlehocz/Seagate/android/BSGResistance/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hu/values-hu.xml",
+            "outputFile": "C:\\Users\\Sulugy\\AndroidStudioProjects\\BSGResistance\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hu\\values-hu.xml",
             "map": [
                 {
-                    "source": "/home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/750760035c04e374c0b8c8d2ba0afa9b/res/values-hu/values-hu.xml",
+                    "source": "C:\\Users\\Sulugy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\0c0ca0dfd1cae9a7f84725f65ac13546\\res\\values-hu\\values-hu.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,213,318,433,517,629,759,835,911,994,1104,1215,1315,1426,1534,1653,1835,1938",
+                        "endColumns": "107,104,114,83,111,129,75,75,82,109,110,99,110,107,118,181,102,82",
+                        "endOffsets": "208,313,428,512,624,754,830,906,989,1099,1210,1310,1421,1529,1648,1830,1933,2016"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Sulugy\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\ebc907477ad4e5b67a93257a79a05d52\\res\\values-hu\\values-hu.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -18,16 +28,6 @@
                         "startOffsets": "2021",
                         "endColumns": "100",
                         "endOffsets": "2117"
-                    }
-                },
-                {
-                    "source": "/home/jlehocz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b07f39ae8c0e35802942f6a03731c9db/res/values-hu/values-hu.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,213,318,433,517,629,759,835,911,994,1104,1215,1315,1426,1534,1653,1835,1938",
-                        "endColumns": "107,104,114,83,111,129,75,75,82,109,110,99,110,107,118,181,102,82",
-                        "endOffsets": "208,313,428,512,624,754,830,906,989,1099,1210,1310,1421,1529,1648,1830,1933,2016"
                     }
                 }
             ]

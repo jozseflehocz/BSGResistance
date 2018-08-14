@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/media/jlehocz/Seagate/android/BSGResistance/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
+            "outputFile": "C:\\Users\\Sulugy\\AndroidStudioProjects\\BSGResistance\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
             "map": [
                 {
-                    "source": "/home/jlehocz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b07f39ae8c0e35802942f6a03731c9db/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "source": "C:\\Users\\Sulugy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\0c0ca0dfd1cae9a7f84725f65ac13546\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
