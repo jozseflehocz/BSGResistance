@@ -1685,7 +1685,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>for now only direct & barriers</td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>3</td><td></td></tr>
      * </table>
@@ -3003,8 +3003,8 @@ public final class R {
     public static final int dee_button=0x7f07003e;
     public static final int default_activity_button=0x7f07003f;
     public static final int detector_button=0x7f070040;
-    public static final int detector_modul_header=0x7f070041;
-    public static final int detektor_modul_grid=0x7f070042;
+    public static final int detector_modul_grid=0x7f070041;
+    public static final int detector_modul_header=0x7f070042;
     public static final int dimensions=0x7f070043;
     public static final int direct=0x7f070044;
     public static final int disableHome=0x7f070045;
@@ -3095,10 +3095,10 @@ public final class R {
     public static final int search_plate=0x7f07009a;
     public static final int search_src_text=0x7f07009b;
     public static final int search_voice_btn=0x7f07009c;
-    public static final int segant_modul_header=0x7f07009d;
-    public static final int select_dialog_listview=0x7f07009e;
-    public static final int sergant_button=0x7f07009f;
-    public static final int sergant_modul_grid=0x7f0700a0;
+    public static final int select_dialog_listview=0x7f07009d;
+    public static final int sergant_button=0x7f07009e;
+    public static final int sergant_modul_grid=0x7f07009f;
+    public static final int sergant_modul_header=0x7f0700a0;
     public static final int shelly_button=0x7f0700a1;
     public static final int sherman_button=0x7f0700a2;
     public static final int shortcut=0x7f0700a3;
@@ -7707,7 +7707,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>for now only direct & barriers</td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>3</td><td></td></tr>
      * </table>

@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Sulugy\\AndroidStudioProjects\\BSGResistance\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rHK\\values-zh-rHK.xml",
+            "outputFile": "/media/jlehocz/Seagate/android/BSGResistance/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Sulugy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\0c0ca0dfd1cae9a7f84725f65ac13546\\res\\values-zh-rHK\\values-zh-rHK.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,200,293,393,475,572,680,756,832,910,1006,1102,1197,1294,1389,1487,1638,1732",
-                        "endColumns": "94,92,99,81,96,107,75,75,77,95,95,94,96,94,97,150,93,77",
-                        "endOffsets": "195,288,388,470,567,675,751,827,905,1001,1097,1192,1289,1384,1482,1633,1727,1805"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Sulugy\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\ebc907477ad4e5b67a93257a79a05d52\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "source": "/home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/750760035c04e374c0b8c8d2ba0afa9b/res/values-zh-rHK/values-zh-rHK.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -28,6 +18,16 @@
                         "startOffsets": "1810",
                         "endColumns": "101",
                         "endOffsets": "1907"
+                    }
+                },
+                {
+                    "source": "/home/jlehocz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b07f39ae8c0e35802942f6a03731c9db/res/values-zh-rHK/values-zh-rHK.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,200,293,393,475,572,680,756,832,910,1006,1102,1197,1294,1389,1487,1638,1732",
+                        "endColumns": "94,92,99,81,96,107,75,75,77,95,95,94,96,94,97,150,93,77",
+                        "endOffsets": "195,288,388,470,567,675,751,827,905,1001,1097,1192,1289,1384,1482,1633,1727,1805"
                     }
                 }
             ]

@@ -670,7 +670,7 @@ public final class R {
         public static final int search_plate = 0x7f07009a;
         public static final int search_src_text = 0x7f07009b;
         public static final int search_voice_btn = 0x7f07009c;
-        public static final int select_dialog_listview = 0x7f07009e;
+        public static final int select_dialog_listview = 0x7f07009d;
         public static final int shortcut = 0x7f0700a3;
         public static final int spacer = 0x7f0700aa;
         public static final int split_action_bar = 0x7f0700ab;

@@ -707,8 +707,8 @@ int id decrease_number_of_players 0x7f07003d
 int id dee_button 0x7f07003e
 int id default_activity_button 0x7f07003f
 int id detector_button 0x7f070040
-int id detector_modul_header 0x7f070041
-int id detektor_modul_grid 0x7f070042
+int id detector_modul_grid 0x7f070041
+int id detector_modul_header 0x7f070042
 int id dimensions 0x7f070043
 int id direct 0x7f070044
 int id disableHome 0x7f070045
@@ -799,10 +799,10 @@ int id search_mag_icon 0x7f070099
 int id search_plate 0x7f07009a
 int id search_src_text 0x7f07009b
 int id search_voice_btn 0x7f07009c
-int id segant_modul_header 0x7f07009d
-int id select_dialog_listview 0x7f07009e
-int id sergant_button 0x7f07009f
-int id sergant_modul_grid 0x7f0700a0
+int id select_dialog_listview 0x7f07009d
+int id sergant_button 0x7f07009e
+int id sergant_modul_grid 0x7f07009f
+int id sergant_modul_header 0x7f0700a0
 int id shelly_button 0x7f0700a1
 int id sherman_button 0x7f0700a2
 int id shortcut 0x7f0700a3

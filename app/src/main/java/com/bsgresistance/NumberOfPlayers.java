@@ -50,12 +50,75 @@ public class NumberOfPlayers extends AppCompatActivity {
             }
         });
 
+        TextView hitModuleHeader = findViewById(R.id.hit_modul_header);
+        final GridLayout hitModuleGrid = findViewById(R.id.hit_modul_grid);
+        hitModuleHeader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setModuleVisibility(hitModuleGrid);
+            }
+        });
+
         TextView vezetoModuleHeader = findViewById(R.id.vezeto_modul_header);
         final GridLayout vezetoModuleGrid = findViewById(R.id.vezeto_modul_grid);
         vezetoModuleHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 setModuleVisibility(vezetoModuleGrid);
+            }
+        });
+
+        TextView familiarModuleHeader = findViewById(R.id.familiar_modul_header);
+        final GridLayout familiarModuleGrid = findViewById(R.id.familiar_modul_grid);
+        familiarModuleHeader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setModuleVisibility(familiarModuleGrid);
+            }
+        });
+
+        TextView moralModuleHeader = findViewById(R.id.moral_modul_header);
+        final GridLayout moralModuleGrid = findViewById(R.id.moral_modul_grid);
+        moralModuleHeader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setModuleVisibility(moralModuleGrid);
+            }
+        });
+
+        TextView extraModuleHeader = findViewById(R.id.extra_modul_header);
+        final GridLayout extraModuleGrid = findViewById(R.id.extra_modul_grid);
+        extraModuleHeader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setModuleVisibility(extraModuleGrid);
+            }
+        });
+
+        TextView detectorModuleHeader = findViewById(R.id.detector_modul_header);
+        final GridLayout detectorModuleGrid = findViewById(R.id.detector_modul_grid);
+        detectorModuleHeader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setModuleVisibility(detectorModuleGrid);
+            }
+        });
+
+        TextView sergantModuleHeader = findViewById(R.id.sergant_modul_header);
+        final GridLayout sergantModuleGrid = findViewById(R.id.sergant_modul_grid);
+        sergantModuleHeader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setModuleVisibility(sergantModuleGrid);
+            }
+        });
+
+        TextView plotModuleHeader = findViewById(R.id.plot_modul_header);
+        final GridLayout plotModuleGrid = findViewById(R.id.plot_modul_grid);
+        plotModuleHeader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setModuleVisibility(plotModuleGrid);
             }
         });
 
