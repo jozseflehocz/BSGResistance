@@ -7,4 +7,10 @@
     <string name="action_start_game">Mehet</string>
     <string name="minimum_number_of_players_toast">Minimum 5 fő szükséges a játékhoz</string>
     <string name="maximum_number_of_players_toast">Maximum 12 fő játszhat</string>
+    <string name="item1">Item 1</string>
+    <string name="group_item1">Group Item 1</string>
+    <string name="group_item2">Group Item 2</string>
+    <string name="submenu_title">Submenu Title</string>
+    <string name="submenu_item1">Submenu Item 1</string>
+
 </resources>

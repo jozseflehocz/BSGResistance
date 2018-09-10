@@ -2,11 +2,11 @@ package com.bsgresistance;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.view.menu.MenuBuilder;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +17,10 @@ public class NumberOfPlayers extends AppCompatActivity {
 
     Button increaseNumberOfPlayersButton;
     Button decreaseNumberOfPlayersButton;
+    Button gaiusButton;
+    Button aaronButton;
+    Button apolloButton;
+    Button shelleyButton;
 
     TextView numberOfPlayersView;
     TextView numberOfHumanPlayersView;
@@ -25,6 +29,12 @@ public class NumberOfPlayers extends AppCompatActivity {
     private int mNumberOfPlayers;
     private int mNumberOfHumanPlayers;
     private int mNumberOfCylonPlayers;
+    private int mNumberOfGaiusPlayers;
+    private int mNumberOfAaronPlayers;
+
+
+    private boolean hasApollo;
+    private boolean hasShelley;
 
 
     @Override
@@ -128,7 +138,8 @@ public class NumberOfPlayers extends AppCompatActivity {
         increaseNumberOfPlayersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                changeNumberOfPlayers(1);
+                setNumberOfPlayers(1);
+                setPlayerFields();
             }
         });
 
@@ -136,7 +147,8 @@ public class NumberOfPlayers extends AppCompatActivity {
         decreaseNumberOfPlayersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                changeNumberOfPlayers(-1);
+                setNumberOfPlayers(-1);
+                setPlayerFields();
             }
         });
 
@@ -144,15 +156,73 @@ public class NumberOfPlayers extends AppCompatActivity {
         numberOfHumanPlayersView=findViewById(R.id.number_of_human_players);
         numberOfCylonPlayersView=findViewById(R.id.number_of_cylon_players);
 
-        setNumberOfPlayers();
-        changeNumberOfPlayers(0);
+        gaiusButton = findViewById(R.id.gaius_button);
+        gaiusButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setGaiusAndAaron();
+                setNumberOfHumanAndCylonPlayers();
+                setPlayerFields();
+
+            }
+        });
+
+        aaronButton = findViewById(R.id.aaron_button);
+        aaronButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setGaiusAndAaron();
+                setNumberOfHumanAndCylonPlayers();
+                setPlayerFields();
+            }
+        });
+
+        apolloButton = findViewById(R.id.apollo_button);
+        apolloButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //setGaiusAndAaron();
+                setNumberOfHumanAndCylonPlayers();
+
+            }
+        });
+
+        shelleyButton = findViewById(R.id.shelly_button);
+        shelleyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //setGaiusAndAaron();
+                setNumberOfHumanAndCylonPlayers();
+            }
+        });
+
+
+        hasApollo = false;
+        hasShelley = false;
+        mNumberOfGaiusPlayers = 1;
+        mNumberOfAaronPlayers = 1;
+        setGaiusAndAaron();
+        setNumberOfPlayers(0);
+        setPlayerFields();
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        if (menu instanceof MenuBuilder) {
+            MenuBuilder m = (MenuBuilder) menu;
+            m.setOptionalIconsVisible(true);
+        }
         return true;
+    }
+
+    public void onGroupItemClick(MenuItem item) {
+        // One of the group items (using the onClick attribute) was clicked
+        // The item parameter passed here indicates which item it is
+        // All other menu item clicks are handled by onOptionsItemSelected()
     }
 
     @Override
@@ -163,7 +233,7 @@ public class NumberOfPlayers extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_start_game) {
+        if (id == R.id.submenu) {
             return true;
         }
 
@@ -190,7 +260,7 @@ public class NumberOfPlayers extends AppCompatActivity {
      * @param changeValue 1, or -1 depends on the button clicked
      */
 
-    private void changeNumberOfPlayers(int changeValue) {
+    private void setNumberOfPlayers(int changeValue) {
 
         String toastText="";
 
@@ -216,11 +286,11 @@ public class NumberOfPlayers extends AppCompatActivity {
             Toast.makeText(this, toastText, Toast.LENGTH_SHORT).show();
         }
 
-        setNumberOfPlayers();
+        setNumberOfHumanAndCylonPlayers();
 
     }
 
-    private void setNumberOfPlayers() {
+    private void setNumberOfHumanAndCylonPlayers() {
 
         switch (mNumberOfPlayers) {
             case 5:
@@ -256,7 +326,38 @@ public class NumberOfPlayers extends AppCompatActivity {
                 mNumberOfCylonPlayers = 4;
         }
 
-        setPlayerFields();
+        mNumberOfHumanPlayers = mNumberOfHumanPlayers - mNumberOfGaiusPlayers;
+        mNumberOfCylonPlayers = mNumberOfCylonPlayers - mNumberOfAaronPlayers;
+    }
+
+
+    private void setGaiusAndAaron() {
+        if (mNumberOfGaiusPlayers == 0) {
+            mNumberOfGaiusPlayers = 1;
+            mNumberOfAaronPlayers = 1;
+        } else {
+            mNumberOfGaiusPlayers = 0;
+            mNumberOfAaronPlayers = 0;
+        }
+
+        setHumanPlayer(mNumberOfGaiusPlayers, gaiusButton);
+        setCylonPlayer(mNumberOfAaronPlayers, aaronButton);
+    }
+
+    private void setHumanPlayer(int numberOfHumanPlayers, Button humanPlayerButton) {
+        if (numberOfHumanPlayers == 1) {
+            humanPlayerButton.setBackgroundColor(getResources().getColor(R.color.colorHuman));
+        } else {
+            humanPlayerButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+        }
+    }
+
+    private void setCylonPlayer(int mNumberOfAaronPlayers, Button cylonPlayerButton) {
+        if (mNumberOfAaronPlayers == 1) {
+            cylonPlayerButton.setBackgroundColor(getResources().getColor(R.color.colorCylon));
+        } else {
+            cylonPlayerButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+        }
     }
 
     private void setPlayerFields(){
