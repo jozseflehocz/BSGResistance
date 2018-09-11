@@ -21,6 +21,8 @@ public class NumberOfPlayers extends AppCompatActivity {
     Button aaronButton;
     Button apolloButton;
     Button shelleyButton;
+    Button ashaButton;
+    Button dAnnaButton;
 
     TextView numberOfPlayersView;
     TextView numberOfHumanPlayersView;
@@ -29,13 +31,16 @@ public class NumberOfPlayers extends AppCompatActivity {
     private int mNumberOfPlayers;
     private int mNumberOfHumanPlayers;
     private int mNumberOfCylonPlayers;
+
+    /**
+     * Tudos modul
+     */
     private int mNumberOfGaiusPlayers;
     private int mNumberOfAaronPlayers;
-
-
-    private boolean hasApollo;
-    private boolean hasShelley;
-
+    private int mNumberOfApolloPlayers;
+    private int mNumberOfShelleyPlayers;
+    private int mNumberOfAshaPlayers;
+    private int mNumberOfDAnnaPlayers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -181,9 +186,9 @@ public class NumberOfPlayers extends AppCompatActivity {
         apolloButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //setGaiusAndAaron();
+                setApolloAndShelley();
                 setNumberOfHumanAndCylonPlayers();
-
+                setPlayerFields();
             }
         });
 
@@ -191,17 +196,47 @@ public class NumberOfPlayers extends AppCompatActivity {
         shelleyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //setGaiusAndAaron();
+                setApolloAndShelley();
                 setNumberOfHumanAndCylonPlayers();
             }
         });
 
+        ashaButton = findViewById(R.id.asha_button);
+        ashaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setAsha();
+                setNumberOfHumanAndCylonPlayers();
+                setPlayerFields();
 
-        hasApollo = false;
-        hasShelley = false;
+            }
+        });
+
+        dAnnaButton = findViewById(R.id.danna_button);
+        dAnnaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setDAnna();
+                setNumberOfHumanAndCylonPlayers();
+                setPlayerFields();
+            }
+        });
+
+        /**
+         * Tudos modul
+         */
+
         mNumberOfGaiusPlayers = 1;
         mNumberOfAaronPlayers = 1;
+        mNumberOfApolloPlayers = 1;
+        mNumberOfShelleyPlayers = 1;
+        mNumberOfAshaPlayers = 1;
+        mNumberOfDAnnaPlayers = 1;
+
         setGaiusAndAaron();
+        setApolloAndShelley();
+        setAsha();
+        setDAnna();
         setNumberOfPlayers(0);
         setPlayerFields();
 
@@ -326,38 +361,75 @@ public class NumberOfPlayers extends AppCompatActivity {
                 mNumberOfCylonPlayers = 4;
         }
 
-        mNumberOfHumanPlayers = mNumberOfHumanPlayers - mNumberOfGaiusPlayers;
-        mNumberOfCylonPlayers = mNumberOfCylonPlayers - mNumberOfAaronPlayers;
+        mNumberOfHumanPlayers = mNumberOfHumanPlayers - mNumberOfGaiusPlayers - mNumberOfApolloPlayers;
+        mNumberOfCylonPlayers = mNumberOfCylonPlayers - mNumberOfAaronPlayers - mNumberOfShelleyPlayers - mNumberOfAshaPlayers - mNumberOfDAnnaPlayers;
     }
 
 
     private void setGaiusAndAaron() {
-        if (mNumberOfGaiusPlayers == 0) {
+        int gaiusButtonBackgroundColorId;
+        int aaronButtonBackgroundColorId;
+        if (mNumberOfGaiusPlayers == 0 && mNumberOfHumanPlayers > 0 && mNumberOfCylonPlayers > 0) {
             mNumberOfGaiusPlayers = 1;
             mNumberOfAaronPlayers = 1;
+            gaiusButtonBackgroundColorId = R.color.colorHuman;
+            aaronButtonBackgroundColorId = R.color.colorCylon;
         } else {
             mNumberOfGaiusPlayers = 0;
             mNumberOfAaronPlayers = 0;
+            gaiusButtonBackgroundColorId = R.color.colorPrimary;
+            aaronButtonBackgroundColorId = R.color.colorPrimary;
         }
 
-        setHumanPlayer(mNumberOfGaiusPlayers, gaiusButton);
-        setCylonPlayer(mNumberOfAaronPlayers, aaronButton);
+        setButtonBackground(gaiusButton, gaiusButtonBackgroundColorId);
+        setButtonBackground(aaronButton, aaronButtonBackgroundColorId);
     }
 
-    private void setHumanPlayer(int numberOfHumanPlayers, Button humanPlayerButton) {
-        if (numberOfHumanPlayers == 1) {
-            humanPlayerButton.setBackgroundColor(getResources().getColor(R.color.colorHuman));
+    private void setApolloAndShelley() {
+        int apolloButtonBackgroundColorId;
+        int shelleyButtonBackgroundColorId;
+        if (mNumberOfApolloPlayers == 0 && mNumberOfHumanPlayers > 0 && mNumberOfCylonPlayers > 0) {
+            mNumberOfApolloPlayers = 1;
+            mNumberOfShelleyPlayers = 1;
+            apolloButtonBackgroundColorId = R.color.colorHuman;
+            shelleyButtonBackgroundColorId = R.color.colorCylon;
         } else {
-            humanPlayerButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+            mNumberOfApolloPlayers = 0;
+            mNumberOfShelleyPlayers = 0;
+            apolloButtonBackgroundColorId = R.color.colorPrimary;
+            shelleyButtonBackgroundColorId = R.color.colorPrimary;
         }
+
+        setButtonBackground(apolloButton, apolloButtonBackgroundColorId);
+        setButtonBackground(shelleyButton, shelleyButtonBackgroundColorId);
     }
 
-    private void setCylonPlayer(int mNumberOfAaronPlayers, Button cylonPlayerButton) {
-        if (mNumberOfAaronPlayers == 1) {
-            cylonPlayerButton.setBackgroundColor(getResources().getColor(R.color.colorCylon));
+    private void setAsha() {
+        int ashaButtonBackgroundColorId;
+        if (mNumberOfAshaPlayers == 0 && mNumberOfCylonPlayers > 0) {
+            mNumberOfAshaPlayers = 1;
+            ashaButtonBackgroundColorId = R.color.colorLightCylon;
         } else {
-            cylonPlayerButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+            mNumberOfAshaPlayers = 0;
+            ashaButtonBackgroundColorId = R.color.colorPrimary;
         }
+        setButtonBackground(ashaButton, ashaButtonBackgroundColorId);
+    }
+
+    private void setDAnna() {
+        int dAnnaButtonBackgroundColorId;
+        if (mNumberOfDAnnaPlayers == 0 && mNumberOfCylonPlayers > 0) {
+            mNumberOfDAnnaPlayers = 1;
+            dAnnaButtonBackgroundColorId = R.color.colorDarkCylon;
+        } else {
+            mNumberOfDAnnaPlayers = 0;
+            dAnnaButtonBackgroundColorId = R.color.colorPrimary;
+        }
+        setButtonBackground(dAnnaButton, dAnnaButtonBackgroundColorId);
+    }
+
+    private void setButtonBackground(Button playerButton, int backgroundColorId) {
+        playerButton.setBackgroundColor(getResources().getColor(backgroundColorId));
     }
 
     private void setPlayerFields(){
