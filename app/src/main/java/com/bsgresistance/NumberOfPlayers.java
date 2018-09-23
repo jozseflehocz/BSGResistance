@@ -17,12 +17,18 @@ public class NumberOfPlayers extends AppCompatActivity {
 
     Button increaseTotalNumberOfPlayersButton;
     Button decreaseTotalNumberOfPlayersButton;
+
+    /**
+     * Specific character buttons
+     */
     Button gaiusButton;
     Button aaronButton;
     Button apolloButton;
     Button shelleyButton;
     Button ashaButton;
     Button dAnnaButton;
+    Button sharonBoomerValeriButton;
+    Button sharonAthenaValeriButton;
 
     TextView totalNumberOfPlayersView;
     TextView totalNumberOfHumanCharactersView;
@@ -49,6 +55,16 @@ public class NumberOfPlayers extends AppCompatActivity {
     private int mNumberOfAshaCharacters;
     private int mNumberOfDAnnaCharacters;
 
+    /**
+     * Disszidens modul
+     */
+
+    private int mNumberOfSharonBoomerValeriCharacters;
+    private int mNumberOfSharonAthenaValeriCharacters;
+
+    /**
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -238,8 +254,28 @@ public class NumberOfPlayers extends AppCompatActivity {
         });
 
         /**
-         * Tudos modul
+         * Disszidens modul buttons
          */
+        sharonBoomerValeriButton = findViewById(R.id.boomer_button);
+        sharonBoomerValeriButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setBoomerAndAthena();
+                setNumberOfHumanAndCylonPlayers();
+                setPlayerFields();
+            }
+        });
+
+        sharonAthenaValeriButton = findViewById(R.id.athena_button);
+        sharonAthenaValeriButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setBoomerAndAthena();
+                setNumberOfHumanAndCylonPlayers();
+                setPlayerFields();
+            }
+        });
+
 
         initCharacters(0);
         setNumberOfPlayers(0);
@@ -367,8 +403,14 @@ public class NumberOfPlayers extends AppCompatActivity {
                 mTotalNumberOfCylonCharacters = 4;
         }
 
-        mTotalNumberOfHumanCharacters = mTotalNumberOfHumanCharacters - mNumberOfGaiusCharacters - mNumberOfApolloCharacters;
-        mTotalNumberOfCylonCharacters = mTotalNumberOfCylonCharacters - mNumberOfAaronCharacters - mNumberOfShelleyCharacters - mNumberOfAshaCharacters - mNumberOfDAnnaCharacters;
+        //mTotalNumberOfHumanCharacters = mTotalNumberOfHumanCharacters - mNumberOfGaiusCharacters - mNumberOfApolloCharacters;
+        //mTotalNumberOfCylonCharacters = mTotalNumberOfCylonCharacters - mNumberOfAaronCharacters - mNumberOfShelleyCharacters - mNumberOfAshaCharacters - mNumberOfDAnnaCharacters;
+
+        // Number of simple characters
+
+        mNumberofSimpleHumanCharacters = mTotalNumberOfHumanCharacters - mNumberOfGaiusCharacters - mNumberOfApolloCharacters - mNumberOfSharonBoomerValeriCharacters;
+        mNumberofSimpleCylonCharacters = mTotalNumberOfCylonCharacters - mNumberOfAaronCharacters - mNumberOfShelleyCharacters - mNumberOfAshaCharacters - mNumberOfDAnnaCharacters - mNumberOfSharonAthenaValeriCharacters;
+
     }
 
 
@@ -445,6 +487,24 @@ public class NumberOfPlayers extends AppCompatActivity {
         setButtonBackground(dAnnaButton, dAnnaButtonBackgroundColorId);
     }
 
+    private void setBoomerAndAthena() {
+        int boomerButtonBackgroundColorId;
+        int athenaButtonBackgroundColorId;
+        if (mNumberOfSharonBoomerValeriCharacters == 0 && mTotalNumberOfHumanCharacters > 0 && mTotalNumberOfCylonCharacters > 0) {
+            mNumberOfSharonBoomerValeriCharacters = 1;
+            mNumberOfSharonAthenaValeriCharacters = 1;
+            boomerButtonBackgroundColorId = R.color.colorHuman;
+            athenaButtonBackgroundColorId = R.color.colorCylon;
+        } else {
+            mNumberOfSharonBoomerValeriCharacters = 0;
+            mNumberOfSharonAthenaValeriCharacters = 0;
+            boomerButtonBackgroundColorId = R.color.colorPrimary;
+            athenaButtonBackgroundColorId = R.color.colorPrimary;
+        }
+        setButtonBackground(sharonBoomerValeriButton, boomerButtonBackgroundColorId);
+        setButtonBackground(sharonAthenaValeriButton, athenaButtonBackgroundColorId);
+    }
+
     private void setButtonBackground(Button playerButton, int backgroundColorId) {
         playerButton.setBackgroundColor(getResources().getColor(backgroundColorId));
     }
@@ -454,8 +514,8 @@ public class NumberOfPlayers extends AppCompatActivity {
         totalNumberOfCylonCharactersView.setText(Integer.toString(mTotalNumberOfCylonCharacters));
     }
     private void setPlayerFields(){
-        numberOfSimpleHumanCharactersView.setText(Integer.toString(mTotalNumberOfHumanCharacters));
-        numberOfSimpleCylonCharactersView.setText(Integer.toString(mTotalNumberOfCylonCharacters));
+        numberOfSimpleHumanCharactersView.setText(Integer.toString(mNumberofSimpleHumanCharacters));
+        numberOfSimpleCylonCharactersView.setText(Integer.toString(mNumberofSimpleCylonCharacters));
     }
 
     private void initCharacters(int initNumberOfCharacters) {
@@ -465,10 +525,15 @@ public class NumberOfPlayers extends AppCompatActivity {
         mNumberOfShelleyCharacters = initNumberOfCharacters;
         mNumberOfAshaCharacters = initNumberOfCharacters;
         mNumberOfDAnnaCharacters = initNumberOfCharacters;
+        mNumberOfSharonBoomerValeriCharacters = initNumberOfCharacters;
+        mNumberOfSharonAthenaValeriCharacters = initNumberOfCharacters;
+        //tudos modul
         setGaiusAndAaron();
         setApollo();
         setShelleyAndApollo();
         setAsha();
         setDAnna();
+        //disszidens modul
+        setBoomerAndAthena();
     }
 }

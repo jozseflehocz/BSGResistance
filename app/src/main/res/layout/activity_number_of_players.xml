@@ -166,6 +166,37 @@
             </GridLayout>
 
             <TextView
+                android:id="@+id/disszidens_modul_header"
+                style="@style/ModulHeaderText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Disszidens modul" />
+
+            <GridLayout
+                android:id="@+id/disszidens_modul_grid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="1">
+
+                <Button
+                    android:id="@+id/boomer_button"
+                    style="@style/PlayerButton.HumanButton"
+                    android:layout_gravity="left|top"
+                    android:layout_margin="25dp"
+                    android:text="'Boomer'\nSharon Valerii" />
+
+                <Button
+                    android:id="@+id/athena_button"
+                    android:layout_gravity="left|top"
+                    android:layout_margin="25dp"
+                    style="@style/PlayerButton.CylonButton"
+                    android:text="'Athena'\nSharon Valerii" />
+            </GridLayout>
+
+            <TextView
                 android:id="@+id/vezeto_modul_header"
                 style="@style/ModulHeaderText"
                 android:layout_width="match_parent"
@@ -183,16 +214,16 @@
 
                 <Button
                     android:id="@+id/williem_button"
+                    style="@style/PlayerButton.HumanButton"
                     android:layout_gravity="left|top"
                     android:layout_margin="25dp"
-                    style="@style/PlayerButton.HumanButton"
                     android:text="Williem Adama" />
 
                 <Button
                     android:id="@+id/cavil_b_button"
+                    style="@style/PlayerButton.CylonButton"
                     android:layout_gravity="left|top"
                     android:layout_margin="25dp"
-                    style="@style/PlayerButton.CylonButton"
                     android:text="John Cavil\n(Galaktica)" />
 
                 <Button
@@ -232,42 +263,11 @@
 
                 <Button
                     android:id="@+id/billy_keikea_button"
+                    style="@style/PlayerButton.WeekHumanButton"
                     android:layout_gravity="left|top"
                     android:layout_margin="25dp"
-                    style="@style/PlayerButton.WeekHumanButton"
                     android:text="Billy KeiKeya" />
 
-            </GridLayout>
-
-            <TextView
-                android:id="@+id/disszidens_modul_header"
-                style="@style/ModulHeaderText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Disszidens modul" />
-
-            <GridLayout
-                android:id="@+id/disszidens_modul_grid"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:columnCount="2"
-                android:orientation="horizontal"
-                android:rowCount="1">
-
-                <Button
-                    android:id="@+id/boomer_button"
-                    style="@style/PlayerButton.HumanButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="'Boomer'\nSharon Valerii" />
-
-                <Button
-                    android:id="@+id/athena_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    style="@style/PlayerButton.CylonButton"
-                    android:text="'Athena'\nSharon Valerii" />
             </GridLayout>
 
             <TextView

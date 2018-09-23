@@ -9,7 +9,7 @@
     </style>
 
     <style name="NumberText">
-        <!-- ToDo mi kell a számjegy középreigazításához? -->
+        <!-- mi kell a számjegy középreigazításához? -->
         <!-- layout-tal kezdődőek nem mehetnek style-ba, ha jól tudom..-->
         <!--<item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -40,7 +40,7 @@
         <item name="android:layout_margin">25dp</item>-->
         <item name="android:padding">20dp</item>
         <item name="android:width">160dp</item>
-        <!--ToDo<item name="android:height">Az egységes magaságot szeretnék elérni de azt úgy tűnik nem így lehet</item>-->
+        <!--<item name="android:height">Az egységes magaságot szeretnék elérni de azt úgy tűnik nem így lehet</item>-->
         <item name="android:textSize">20sp</item>
     </style>
 
