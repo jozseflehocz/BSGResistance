@@ -15,8 +15,8 @@ import com.bsgresistance.bsgresistance.R;
 
 public class NumberOfPlayers extends AppCompatActivity {
 
-    Button increaseNumberOfPlayersButton;
-    Button decreaseNumberOfPlayersButton;
+    Button increaseTotalNumberOfPlayersButton;
+    Button decreaseTotalNumberOfPlayersButton;
     Button gaiusButton;
     Button aaronButton;
     Button apolloButton;
@@ -24,23 +24,30 @@ public class NumberOfPlayers extends AppCompatActivity {
     Button ashaButton;
     Button dAnnaButton;
 
-    TextView numberOfPlayersView;
-    TextView numberOfHumanPlayersView;
-    TextView numberOfCylonPlayersView;
+    TextView totalNumberOfPlayersView;
+    TextView totalNumberOfHumanCharactersView;
+    TextView totalNumberOfCylonCharactersView;
+    TextView numberOfSimpleHumanCharactersView;
+    TextView numberOfSimpleCylonCharactersView;
 
-    private int mNumberOfPlayers;
-    private int mNumberOfHumanPlayers;
-    private int mNumberOfCylonPlayers;
+    /**
+     * Total number of players including basic and specific characters
+     */
+    private int mTotalNumberOfPlayers;
+    private int mTotalNumberOfHumanCharacters;
+    private int mTotalNumberOfCylonCharacters;
+    private int mNumberofSimpleHumanCharacters;
+    private int mNumberofSimpleCylonCharacters;
 
     /**
      * Tudos modul
      */
-    private int mNumberOfGaiusPlayers;
-    private int mNumberOfAaronPlayers;
-    private int mNumberOfApolloPlayers;
-    private int mNumberOfShelleyPlayers;
-    private int mNumberOfAshaPlayers;
-    private int mNumberOfDAnnaPlayers;
+    private int mNumberOfGaiusCharacters;
+    private int mNumberOfAaronCharacters;
+    private int mNumberOfApolloCharacters;
+    private int mNumberOfShelleyCharacters;
+    private int mNumberOfAshaCharacters;
+    private int mNumberOfDAnnaCharacters;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -137,29 +144,36 @@ public class NumberOfPlayers extends AppCompatActivity {
             }
         });
 
-        mNumberOfPlayers=Integer.parseInt(getString(R.string.number_of_players_default_value));
+        mTotalNumberOfPlayers = Integer.parseInt(getString(R.string.number_of_players_default_value));
 
-        increaseNumberOfPlayersButton = findViewById(R.id.increase_total_number_of_players);
-        increaseNumberOfPlayersButton.setOnClickListener(new View.OnClickListener() {
+        increaseTotalNumberOfPlayersButton = findViewById(R.id.increase_total_number_of_players);
+        increaseTotalNumberOfPlayersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                initCharacters(1);
                 setNumberOfPlayers(1);
+                setTotalPlayerFields();
                 setPlayerFields();
             }
         });
 
-        decreaseNumberOfPlayersButton = findViewById(R.id.decrease_total_number_of_players);
-        decreaseNumberOfPlayersButton.setOnClickListener(new View.OnClickListener() {
+        decreaseTotalNumberOfPlayersButton = findViewById(R.id.decrease_total_number_of_players);
+        decreaseTotalNumberOfPlayersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                initCharacters(1);
                 setNumberOfPlayers(-1);
+                setTotalPlayerFields();
                 setPlayerFields();
             }
         });
 
-        numberOfPlayersView = findViewById(R.id.total_number_of_players);
-        numberOfHumanPlayersView = findViewById(R.id.total_number_of_human_players);
-        numberOfCylonPlayersView = findViewById(R.id.total_number_of_cylon_players);
+        totalNumberOfPlayersView = findViewById(R.id.total_number_of_players);
+        totalNumberOfHumanCharactersView = findViewById(R.id.total_number_of_human_players);
+        totalNumberOfCylonCharactersView = findViewById(R.id.total_number_of_cylon_players);
+        numberOfSimpleHumanCharactersView = findViewById(R.id.number_of_simple_human_characters);
+        numberOfSimpleCylonCharactersView = findViewById(R.id.number_of_simple_cylon_characters);
+
 
         gaiusButton = findViewById(R.id.gaius_button);
         gaiusButton.setOnClickListener(new View.OnClickListener() {
@@ -186,7 +200,7 @@ public class NumberOfPlayers extends AppCompatActivity {
         apolloButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setApolloAndShelley();
+                setApollo();
                 setNumberOfHumanAndCylonPlayers();
                 setPlayerFields();
             }
@@ -196,8 +210,9 @@ public class NumberOfPlayers extends AppCompatActivity {
         shelleyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setApolloAndShelley();
+                setShelleyAndApollo();
                 setNumberOfHumanAndCylonPlayers();
+                setPlayerFields();
             }
         });
 
@@ -226,18 +241,9 @@ public class NumberOfPlayers extends AppCompatActivity {
          * Tudos modul
          */
 
-        mNumberOfGaiusPlayers = 1;
-        mNumberOfAaronPlayers = 1;
-        mNumberOfApolloPlayers = 1;
-        mNumberOfShelleyPlayers = 1;
-        mNumberOfAshaPlayers = 1;
-        mNumberOfDAnnaPlayers = 1;
-
-        setGaiusAndAaron();
-        setApolloAndShelley();
-        setAsha();
-        setDAnna();
+        initCharacters(0);
         setNumberOfPlayers(0);
+        setTotalPlayerFields();
         setPlayerFields();
 
     }
@@ -299,21 +305,21 @@ public class NumberOfPlayers extends AppCompatActivity {
 
         String toastText="";
 
-        if (!numberOfPlayersView.getText().toString().isEmpty()) {
-            mNumberOfPlayers = Integer.parseInt(numberOfPlayersView.getText().toString().trim());
+        if (!totalNumberOfPlayersView.getText().toString().isEmpty()) {
+            mTotalNumberOfPlayers = Integer.parseInt(totalNumberOfPlayersView.getText().toString().trim());
         }
 
-        decreaseNumberOfPlayersButton.setEnabled(true);
-        increaseNumberOfPlayersButton.setEnabled(true);
-        mNumberOfPlayers = mNumberOfPlayers+changeValue;
-        numberOfPlayersView.setText(String.valueOf(mNumberOfPlayers));
+        decreaseTotalNumberOfPlayersButton.setEnabled(true);
+        increaseTotalNumberOfPlayersButton.setEnabled(true);
+        mTotalNumberOfPlayers = mTotalNumberOfPlayers + changeValue;
+        totalNumberOfPlayersView.setText(String.valueOf(mTotalNumberOfPlayers));
 
-        if (mNumberOfPlayers<6) {
-            decreaseNumberOfPlayersButton.setEnabled(false);
+        if (mTotalNumberOfPlayers < 6) {
+            decreaseTotalNumberOfPlayersButton.setEnabled(false);
             toastText=getString(R.string.minimum_number_of_players_toast);
         }
-        if (mNumberOfPlayers>11) {
-            increaseNumberOfPlayersButton.setEnabled(false);
+        if (mTotalNumberOfPlayers > 11) {
+            increaseTotalNumberOfPlayersButton.setEnabled(false);
             toastText=getString(R.string.maximum_number_of_players_toast);
         }
 
@@ -327,56 +333,56 @@ public class NumberOfPlayers extends AppCompatActivity {
 
     private void setNumberOfHumanAndCylonPlayers() {
 
-        switch (mNumberOfPlayers) {
+        switch (mTotalNumberOfPlayers) {
             case 5:
-                mNumberOfHumanPlayers = 3;
-                mNumberOfCylonPlayers = 2;
+                mTotalNumberOfHumanCharacters = 3;
+                mTotalNumberOfCylonCharacters = 2;
                 break;
             case 6:
-                mNumberOfHumanPlayers = 4;
-                mNumberOfCylonPlayers = 2;
+                mTotalNumberOfHumanCharacters = 4;
+                mTotalNumberOfCylonCharacters = 2;
                 break;
             case 7:
-                mNumberOfHumanPlayers = 4;
-                mNumberOfCylonPlayers = 3;
+                mTotalNumberOfHumanCharacters = 4;
+                mTotalNumberOfCylonCharacters = 3;
                 break;
             case 8:
-                mNumberOfHumanPlayers = 5;
-                mNumberOfCylonPlayers = 3;
+                mTotalNumberOfHumanCharacters = 5;
+                mTotalNumberOfCylonCharacters = 3;
                 break;
             case 9:
-                mNumberOfHumanPlayers = 6;
-                mNumberOfCylonPlayers = 3;
+                mTotalNumberOfHumanCharacters = 6;
+                mTotalNumberOfCylonCharacters = 3;
                 break;
             case 10:
-                mNumberOfHumanPlayers = 6;
-                mNumberOfCylonPlayers = 4;
+                mTotalNumberOfHumanCharacters = 6;
+                mTotalNumberOfCylonCharacters = 4;
                 break;
             case 11:
-                mNumberOfHumanPlayers = 7;
-                mNumberOfCylonPlayers = 4;
+                mTotalNumberOfHumanCharacters = 7;
+                mTotalNumberOfCylonCharacters = 4;
                 break;
             default:
-                mNumberOfHumanPlayers = 8;
-                mNumberOfCylonPlayers = 4;
+                mTotalNumberOfHumanCharacters = 8;
+                mTotalNumberOfCylonCharacters = 4;
         }
 
-        mNumberOfHumanPlayers = mNumberOfHumanPlayers - mNumberOfGaiusPlayers - mNumberOfApolloPlayers;
-        mNumberOfCylonPlayers = mNumberOfCylonPlayers - mNumberOfAaronPlayers - mNumberOfShelleyPlayers - mNumberOfAshaPlayers - mNumberOfDAnnaPlayers;
+        mTotalNumberOfHumanCharacters = mTotalNumberOfHumanCharacters - mNumberOfGaiusCharacters - mNumberOfApolloCharacters;
+        mTotalNumberOfCylonCharacters = mTotalNumberOfCylonCharacters - mNumberOfAaronCharacters - mNumberOfShelleyCharacters - mNumberOfAshaCharacters - mNumberOfDAnnaCharacters;
     }
 
 
     private void setGaiusAndAaron() {
         int gaiusButtonBackgroundColorId;
         int aaronButtonBackgroundColorId;
-        if (mNumberOfGaiusPlayers == 0 && mNumberOfHumanPlayers > 0 && mNumberOfCylonPlayers > 0) {
-            mNumberOfGaiusPlayers = 1;
-            mNumberOfAaronPlayers = 1;
+        if (mNumberOfGaiusCharacters == 0 && mTotalNumberOfHumanCharacters > 0 && mTotalNumberOfCylonCharacters > 0) {
+            mNumberOfGaiusCharacters = 1;
+            mNumberOfAaronCharacters = 1;
             gaiusButtonBackgroundColorId = R.color.colorHuman;
             aaronButtonBackgroundColorId = R.color.colorCylon;
         } else {
-            mNumberOfGaiusPlayers = 0;
-            mNumberOfAaronPlayers = 0;
+            mNumberOfGaiusCharacters = 0;
+            mNumberOfAaronCharacters = 0;
             gaiusButtonBackgroundColorId = R.color.colorPrimary;
             aaronButtonBackgroundColorId = R.color.colorPrimary;
         }
@@ -385,32 +391,43 @@ public class NumberOfPlayers extends AppCompatActivity {
         setButtonBackground(aaronButton, aaronButtonBackgroundColorId);
     }
 
-    private void setApolloAndShelley() {
+    private void setApollo() {
+        int apolloButtonBackgroundColorId;
+        if (mNumberOfApolloCharacters == 0 && mTotalNumberOfHumanCharacters > 0 && mTotalNumberOfCylonCharacters > 0) {
+            mNumberOfApolloCharacters = 1;
+            apolloButtonBackgroundColorId = R.color.colorHuman;
+        } else {
+            mNumberOfApolloCharacters = 0;
+            apolloButtonBackgroundColorId = R.color.colorPrimary;
+        }
+        setButtonBackground(apolloButton, apolloButtonBackgroundColorId);
+    }
+
+    private void setShelleyAndApollo() {
         int apolloButtonBackgroundColorId;
         int shelleyButtonBackgroundColorId;
-        if (mNumberOfApolloPlayers == 0 && mNumberOfHumanPlayers > 0 && mNumberOfCylonPlayers > 0) {
-            mNumberOfApolloPlayers = 1;
-            mNumberOfShelleyPlayers = 1;
+        if (mNumberOfShelleyCharacters == 0 && mTotalNumberOfHumanCharacters > 0 && mTotalNumberOfCylonCharacters > 0) {
+            mNumberOfApolloCharacters = 1;
+            mNumberOfShelleyCharacters = 1;
             apolloButtonBackgroundColorId = R.color.colorHuman;
             shelleyButtonBackgroundColorId = R.color.colorCylon;
         } else {
-            mNumberOfApolloPlayers = 0;
-            mNumberOfShelleyPlayers = 0;
+            mNumberOfApolloCharacters = 0;
+            mNumberOfShelleyCharacters = 0;
             apolloButtonBackgroundColorId = R.color.colorPrimary;
             shelleyButtonBackgroundColorId = R.color.colorPrimary;
         }
-
-        setButtonBackground(apolloButton, apolloButtonBackgroundColorId);
         setButtonBackground(shelleyButton, shelleyButtonBackgroundColorId);
+        setButtonBackground(apolloButton, apolloButtonBackgroundColorId);
     }
 
     private void setAsha() {
         int ashaButtonBackgroundColorId;
-        if (mNumberOfAshaPlayers == 0 && mNumberOfCylonPlayers > 0) {
-            mNumberOfAshaPlayers = 1;
+        if (mNumberOfAshaCharacters == 0 && mTotalNumberOfCylonCharacters > 0) {
+            mNumberOfAshaCharacters = 1;
             ashaButtonBackgroundColorId = R.color.colorLightCylon;
         } else {
-            mNumberOfAshaPlayers = 0;
+            mNumberOfAshaCharacters = 0;
             ashaButtonBackgroundColorId = R.color.colorPrimary;
         }
         setButtonBackground(ashaButton, ashaButtonBackgroundColorId);
@@ -418,11 +435,11 @@ public class NumberOfPlayers extends AppCompatActivity {
 
     private void setDAnna() {
         int dAnnaButtonBackgroundColorId;
-        if (mNumberOfDAnnaPlayers == 0 && mNumberOfCylonPlayers > 0) {
-            mNumberOfDAnnaPlayers = 1;
+        if (mNumberOfDAnnaCharacters == 0 && mTotalNumberOfCylonCharacters > 0) {
+            mNumberOfDAnnaCharacters = 1;
             dAnnaButtonBackgroundColorId = R.color.colorDarkCylon;
         } else {
-            mNumberOfDAnnaPlayers = 0;
+            mNumberOfDAnnaCharacters = 0;
             dAnnaButtonBackgroundColorId = R.color.colorPrimary;
         }
         setButtonBackground(dAnnaButton, dAnnaButtonBackgroundColorId);
@@ -432,8 +449,26 @@ public class NumberOfPlayers extends AppCompatActivity {
         playerButton.setBackgroundColor(getResources().getColor(backgroundColorId));
     }
 
+    private void setTotalPlayerFields() {
+        totalNumberOfHumanCharactersView.setText(Integer.toString(mTotalNumberOfHumanCharacters));
+        totalNumberOfCylonCharactersView.setText(Integer.toString(mTotalNumberOfCylonCharacters));
+    }
     private void setPlayerFields(){
-        numberOfHumanPlayersView.setText(Integer.toString(mNumberOfHumanPlayers));
-        numberOfCylonPlayersView.setText(Integer.toString(mNumberOfCylonPlayers));
+        numberOfSimpleHumanCharactersView.setText(Integer.toString(mTotalNumberOfHumanCharacters));
+        numberOfSimpleCylonCharactersView.setText(Integer.toString(mTotalNumberOfCylonCharacters));
+    }
+
+    private void initCharacters(int initNumberOfCharacters) {
+        mNumberOfGaiusCharacters = initNumberOfCharacters;
+        mNumberOfAaronCharacters = initNumberOfCharacters;
+        mNumberOfApolloCharacters = initNumberOfCharacters;
+        mNumberOfShelleyCharacters = initNumberOfCharacters;
+        mNumberOfAshaCharacters = initNumberOfCharacters;
+        mNumberOfDAnnaCharacters = initNumberOfCharacters;
+        setGaiusAndAaron();
+        setApollo();
+        setShelleyAndApollo();
+        setAsha();
+        setDAnna();
     }
 }

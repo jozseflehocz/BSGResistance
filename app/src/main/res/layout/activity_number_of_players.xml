@@ -21,41 +21,32 @@
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/decrease_total_number_of_players"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="5dp"
-                    android:text="@string/decrease_button_label"
-                    android:textSize="25sp" />
-
                 <TextView
                     android:id="@+id/total_number_of_human_players"
                     style="@style/NumberText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@color/colorHuman"
+                    android:gravity="center" />
+
+                <Button
+                    android:id="@+id/decrease_total_number_of_players"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_margin="5dp"
-                    android:layout_gravity="center_vertical"
-                    android:background="@color/colorHuman" />
+                    android:text="@string/decrease_button_label"
+                    android:textSize="25sp" />
 
                 <TextView
                     android:id="@+id/total_number_of_players"
                     style="@style/NumberText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="5dp"
-                    android:background="@color/colorPrimary" />
-
-                <TextView
-                    android:id="@+id/total_number_of_cylon_players"
-                    style="@style/NumberText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="5dp"
-                    android:background="@color/colorCylon" />
+                    android:layout_margin="15dp"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center" />
 
                 <Button
                     android:id="@+id/increase_total_number_of_players"
@@ -65,6 +56,16 @@
                     android:layout_margin="5dp"
                     android:text="@string/increase_button_label"
                     android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/total_number_of_cylon_players"
+                    style="@style/NumberText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:gravity="center"
+                    android:background="@color/colorCylon" />
+
             </LinearLayout>
 
             <TextView
@@ -73,8 +74,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Alap Modul" />
-            <!--ToDo Az általma iderakot modultokat nem lehet összehúzni, ami ide pont jó de a többi modulnál meg nem jó...-->
+                android:text="@string/alap_karakterek" />
+
             <GridLayout
                 android:id="@+id/alap_modul_grid"
                 android:layout_width="wrap_content"
@@ -83,22 +84,24 @@
                 android:orientation="horizontal"
                 android:rowCount="2">
 
+                <!-- Ez egy szám, ami a @+id/total_number_of_human_players minusz a bejelölt emberi karakterek száma-->
                 <TextView
                     android:id="@+id/number_of_simple_human_characters"
                     style="@style/NumberText"
                     android:layout_margin="25dp"
                     android:background="@color/colorHuman"
+                    android:gravity="center"
                     android:text="E" />
-                <!--ToDo Ez egy szám, ami a @+id/number_of_human_players minusz a bejelölt emberi karakterek száma-->
 
+                <!--Ez egy szám, ami a @+id/total_number_of_cylon_players minusz a bejelölt cylon karakterek száma-->
                 <TextView
                     android:id="@+id/number_of_simple_cylon_characters"
                     style="@style/NumberText"
                     android:layout_gravity="right|center_vertical"
                     android:layout_margin="25dp"
                     android:background="@color/colorCylon"
+                    android:gravity="center"
                     android:text="C" />
-                <!--ToDo Ez egy szám, ami a @+id/number_of_human_players minusz a bejelölt emberi karakterek száma-->
 
             </GridLayout>
 
