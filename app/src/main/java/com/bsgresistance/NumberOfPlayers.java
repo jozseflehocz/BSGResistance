@@ -139,7 +139,7 @@ public class NumberOfPlayers extends AppCompatActivity {
 
         mNumberOfPlayers=Integer.parseInt(getString(R.string.number_of_players_default_value));
 
-        increaseNumberOfPlayersButton = findViewById(R.id.increase_number_of_players);
+        increaseNumberOfPlayersButton = findViewById(R.id.increase_total_number_of_players);
         increaseNumberOfPlayersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -148,7 +148,7 @@ public class NumberOfPlayers extends AppCompatActivity {
             }
         });
 
-        decreaseNumberOfPlayersButton = findViewById(R.id.decrease_number_of_players);
+        decreaseNumberOfPlayersButton = findViewById(R.id.decrease_total_number_of_players);
         decreaseNumberOfPlayersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -157,9 +157,9 @@ public class NumberOfPlayers extends AppCompatActivity {
             }
         });
 
-        numberOfPlayersView=findViewById(R.id.number_of_players);
-        numberOfHumanPlayersView=findViewById(R.id.number_of_human_players);
-        numberOfCylonPlayersView=findViewById(R.id.number_of_cylon_players);
+        numberOfPlayersView = findViewById(R.id.total_number_of_players);
+        numberOfHumanPlayersView = findViewById(R.id.total_number_of_human_players);
+        numberOfCylonPlayersView = findViewById(R.id.total_number_of_cylon_players);
 
         gaiusButton = findViewById(R.id.gaius_button);
         gaiusButton.setOnClickListener(new View.OnClickListener() {
