@@ -121,47 +121,41 @@
                 android:orientation="horizontal"
                 android:rowCount="3">
 
-                <Button
+                <ToggleButton
                     android:id="@+id/gaius_button"
-                    style="@style/PlayerButton.HumanButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Gaius Baltar" />
+                    android:textOff="Gaius Baltar"
+                    android:textOn="Gaius Baltar"
+                    android:theme="@style/AppTheme.HumanButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/aaron_button"
-                    style="@style/PlayerButton.CylonButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Aaron Doral" />
+                    android:textOff="Aaron Doral"
+                    android:textOn="Aaron Doral"
+                    android:theme="@style/AppTheme.CylonButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/apollo_button"
-                    style="@style/PlayerButton.HumanButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="'Apollo'\nLee Adama" />
+                    android:textOff="'Apollo' Lee Adama"
+                    android:textOn="'Apollo' Lee Adama"
+                    android:theme="@style/AppTheme.HumanButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/shelly_button"
-                    style="@style/PlayerButton.CylonButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Shelly Godfrey" />
+                    android:textOff="Shelly Godfrey"
+                    android:textOn="Shelly Godfrey"
+                    android:theme="@style/AppTheme.CylonButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/asha_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    style="@style/PlayerButton.EasyCylonButton"
-                    android:text="Asha Janik" />
+                    android:textOff="Asha Janik"
+                    android:textOn="Asha Janik"
+                    android:theme="@style/AppTheme.LightCylonButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/danna_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    style="@style/PlayerButton.HardCylonButton"
-                    android:text="D'anna Biers" />
+                    android:textOff="D'anna Biers"
+                    android:textOn="D'anna Biers"
+                    android:theme="@style/AppTheme.DarkCylonButton" />
 
             </GridLayout>
 
@@ -181,19 +175,17 @@
                 android:orientation="horizontal"
                 android:rowCount="1">
 
-                <Button
+                <ToggleButton
                     android:id="@+id/boomer_button"
-                    style="@style/PlayerButton.HumanButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="'Boomer'\nSharon Valerii" />
+                    android:textOff="'Boomer'\nSharon Valerii"
+                    android:textOn="'Boomer'\nSharon Valerii"
+                    android:theme="@style/AppTheme.HumanButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/athena_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    style="@style/PlayerButton.CylonButton"
-                    android:text="'Athena'\nSharon Valerii" />
+                    android:textOff="'Athena'\nSharon Valerii"
+                    android:textOn="'Athena'\nSharon Valerii"
+                    android:theme="@style/AppTheme.CylonButton" />
             </GridLayout>
 
             <TextView

@@ -8,6 +8,30 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.HumanButton" parent="Base.Widget.AppCompat.Button">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorHuman</item>
+    </style>
+
+    <style name="AppTheme.CylonButton" parent="Base.Widget.AppCompat.Button">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorCylon</item>
+    </style>
+
+    <style name="AppTheme.LightCylonButton" parent="Base.Widget.AppCompat.Button">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorLightCylon</item>
+    </style>
+
+    <style name="AppTheme.DarkCylonButton" parent="Base.Widget.AppCompat.Button">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorDarkCylon</item>
+    </style>
+
     <style name="NumberText">
         <!-- mi kell a számjegy középreigazításához? -->
         <!-- layout-tal kezdődőek nem mehetnek style-ba, ha jól tudom..-->

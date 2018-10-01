@@ -4,18 +4,18 @@ ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidMani
 INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:2:1-21:12
 INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:2:1-21:12
 INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:2:1-21:12
-MERGED from [com.android.support:appcompat-v7:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b07f39ae8c0e35802942f6a03731c9db/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/232d2ee308aa848026866f9be4a357c7/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-fragment:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/f31d496ff631dd18eba4046e66f90636/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/0cf52692df53d870a0523d123f85e147/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/6676078fd2c01f625cafe6bd26790767/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/625e34f48766c1b6041eb59cd51fcd6e/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/e8a82dc98c48bd84ec5e22d05e5a4af6/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/750760035c04e374c0b8c8d2ba0afa9b/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/ae27a221d32de2c536a5814c4ecf85f1/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/2dbec3e4d8ea834ed9c099f88eb10974/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/f048d63ae14d4a8ad12bd420dfa8fdd0/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/00fa988990f87eecaa4c2cf41a3e7c0d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/0b2ef7bf71dff5138fab124b9b56eb1e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/94e5467a5e297bb3249a00898faf151c/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/5e10ae7c258205f4260a3c33d19ec81f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/e9eb9fa297f40cbff9325414cfb15b03/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/5accaf5f05f75d648cdbc4f713e019b0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/7dda074693b397494ce20936c8267c7a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/69085ca15510e3d28181c0d5a3e0b1e7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/34b8c816ca308a2b72a0600ce3689242/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/fa844ed753941308cb55c3eb89c8b441/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/86da7632e57cfc8949262d9198325e1e/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/a6bc39a73118b3b9025d38778fa212fa/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b581acfb2c0f8494f3140752e9790a62/AndroidManifest.xml:17:1-22:12
 INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:2:1-21:12
 INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:2:1-21:12
 INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:2:1-21:12
@@ -35,8 +35,8 @@ INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidM
 		ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:2:11-69
 application
 ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:5:5-19:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/232d2ee308aa848026866f9be4a357c7/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/232d2ee308aa848026866f9be4a357c7/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/94e5467a5e297bb3249a00898faf151c/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/94e5467a5e297bb3249a00898faf151c/AndroidManifest.xml:9:5-20
 	android:supportsRtl
 		ADDED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml:10:9-35
 	android:label
@@ -67,30 +67,30 @@ uses-sdk
 INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml
 INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml
-MERGED from [com.android.support:appcompat-v7:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b07f39ae8c0e35802942f6a03731c9db/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b07f39ae8c0e35802942f6a03731c9db/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/232d2ee308aa848026866f9be4a357c7/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/232d2ee308aa848026866f9be4a357c7/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-fragment:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/f31d496ff631dd18eba4046e66f90636/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/f31d496ff631dd18eba4046e66f90636/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/0cf52692df53d870a0523d123f85e147/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/0cf52692df53d870a0523d123f85e147/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/6676078fd2c01f625cafe6bd26790767/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/6676078fd2c01f625cafe6bd26790767/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/625e34f48766c1b6041eb59cd51fcd6e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/625e34f48766c1b6041eb59cd51fcd6e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/e8a82dc98c48bd84ec5e22d05e5a4af6/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/e8a82dc98c48bd84ec5e22d05e5a4af6/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/750760035c04e374c0b8c8d2ba0afa9b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/750760035c04e374c0b8c8d2ba0afa9b/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/ae27a221d32de2c536a5814c4ecf85f1/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/ae27a221d32de2c536a5814c4ecf85f1/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/2dbec3e4d8ea834ed9c099f88eb10974/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/2dbec3e4d8ea834ed9c099f88eb10974/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/f048d63ae14d4a8ad12bd420dfa8fdd0/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/f048d63ae14d4a8ad12bd420dfa8fdd0/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/00fa988990f87eecaa4c2cf41a3e7c0d/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/00fa988990f87eecaa4c2cf41a3e7c0d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/0b2ef7bf71dff5138fab124b9b56eb1e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/0b2ef7bf71dff5138fab124b9b56eb1e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/94e5467a5e297bb3249a00898faf151c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/94e5467a5e297bb3249a00898faf151c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/5e10ae7c258205f4260a3c33d19ec81f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/5e10ae7c258205f4260a3c33d19ec81f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/e9eb9fa297f40cbff9325414cfb15b03/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/e9eb9fa297f40cbff9325414cfb15b03/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/5accaf5f05f75d648cdbc4f713e019b0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/5accaf5f05f75d648cdbc4f713e019b0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/7dda074693b397494ce20936c8267c7a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/7dda074693b397494ce20936c8267c7a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/69085ca15510e3d28181c0d5a3e0b1e7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/69085ca15510e3d28181c0d5a3e0b1e7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/34b8c816ca308a2b72a0600ce3689242/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/34b8c816ca308a2b72a0600ce3689242/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/fa844ed753941308cb55c3eb89c8b441/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/fa844ed753941308cb55c3eb89c8b441/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/86da7632e57cfc8949262d9198325e1e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/86da7632e57cfc8949262d9198325e1e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/a6bc39a73118b3b9025d38778fa212fa/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/a6bc39a73118b3b9025d38778fa212fa/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b581acfb2c0f8494f3140752e9790a62/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/jlehocz/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b581acfb2c0f8494f3140752e9790a62/AndroidManifest.xml:20:5-44
 INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml
 INJECTED from /media/jlehocz/Seagate/android/BSGResistance/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
