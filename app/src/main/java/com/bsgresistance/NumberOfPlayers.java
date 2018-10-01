@@ -1,17 +1,26 @@
 package com.bsgresistance;
 
+import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.view.menu.MenuBuilder;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.GridLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.bsgresistance.bsgresistance.R;
+
+import java.util.ArrayList;
+
+import static com.bsgresistance.bsgresistance.R.*;
 
 public class NumberOfPlayers extends AppCompatActivity {
 
@@ -19,16 +28,17 @@ public class NumberOfPlayers extends AppCompatActivity {
     Button decreaseTotalNumberOfPlayersButton;
 
     /**
-     * Specific character buttons
+     * ToggleButtons to enable/disable characters
      */
-    Button gaiusButton;
-    Button aaronButton;
-    Button apolloButton;
-    Button shelleyButton;
-    Button ashaButton;
-    Button dAnnaButton;
-    Button sharonBoomerValeriButton;
-    Button sharonAthenaValeriButton;
+    ToggleButton gaiusToggleButton;
+    ToggleButton aaronToggleButton;
+    ToggleButton apolloToggleButton;
+    ToggleButton shelleyToggleButton;
+    ToggleButton ashaToggleButton;
+    ToggleButton dAnnaToggleButton;
+    ToggleButton sharonBoomerValeriToggleButton;
+    ToggleButton sharonAthenaValeriToggleButton;
+    ArrayList<ToggleButton> cylonToggleButton = new ArrayList<ToggleButton>();
 
     TextView totalNumberOfPlayersView;
     TextView totalNumberOfHumanCharactersView;
@@ -68,10 +78,10 @@ public class NumberOfPlayers extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_number_of_players);
+        setContentView(layout.activity_number_of_players);
 
-        TextView tudosModuleHeader = findViewById(R.id.tudos_modul_header);
-        final GridLayout tudosModuleGrid = findViewById(R.id.tudos_modul_grid);
+        TextView tudosModuleHeader = findViewById(id.tudos_modul_header);
+        final GridLayout tudosModuleGrid = findViewById(id.tudos_modul_grid);
         tudosModuleHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,8 +89,8 @@ public class NumberOfPlayers extends AppCompatActivity {
             }
         });
 
-        TextView disszidensModuleHeader = findViewById(R.id.disszidens_modul_header);
-        final GridLayout disszidensModuleGrid = findViewById(R.id.disszidens_modul_grid);
+        TextView disszidensModuleHeader = findViewById(id.disszidens_modul_header);
+        final GridLayout disszidensModuleGrid = findViewById(id.disszidens_modul_grid);
         disszidensModuleHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,8 +98,8 @@ public class NumberOfPlayers extends AppCompatActivity {
             }
         });
 
-        TextView hitModuleHeader = findViewById(R.id.hit_modul_header);
-        final GridLayout hitModuleGrid = findViewById(R.id.hit_modul_grid);
+        TextView hitModuleHeader = findViewById(id.hit_modul_header);
+        final GridLayout hitModuleGrid = findViewById(id.hit_modul_grid);
         hitModuleHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -97,8 +107,8 @@ public class NumberOfPlayers extends AppCompatActivity {
             }
         });
 
-        TextView vezetoModuleHeader = findViewById(R.id.vezeto_modul_header);
-        final GridLayout vezetoModuleGrid = findViewById(R.id.vezeto_modul_grid);
+        TextView vezetoModuleHeader = findViewById(id.vezeto_modul_header);
+        final GridLayout vezetoModuleGrid = findViewById(id.vezeto_modul_grid);
         vezetoModuleHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,8 +116,8 @@ public class NumberOfPlayers extends AppCompatActivity {
             }
         });
 
-        TextView familiarModuleHeader = findViewById(R.id.familiar_modul_header);
-        final GridLayout familiarModuleGrid = findViewById(R.id.familiar_modul_grid);
+        TextView familiarModuleHeader = findViewById(id.familiar_modul_header);
+        final GridLayout familiarModuleGrid = findViewById(id.familiar_modul_grid);
         familiarModuleHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,8 +125,8 @@ public class NumberOfPlayers extends AppCompatActivity {
             }
         });
 
-        TextView moralModuleHeader = findViewById(R.id.moral_modul_header);
-        final GridLayout moralModuleGrid = findViewById(R.id.moral_modul_grid);
+        TextView moralModuleHeader = findViewById(id.moral_modul_header);
+        final GridLayout moralModuleGrid = findViewById(id.moral_modul_grid);
         moralModuleHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -124,8 +134,8 @@ public class NumberOfPlayers extends AppCompatActivity {
             }
         });
 
-        TextView extraModuleHeader = findViewById(R.id.extra_modul_header);
-        final GridLayout extraModuleGrid = findViewById(R.id.extra_modul_grid);
+        TextView extraModuleHeader = findViewById(id.extra_modul_header);
+        final GridLayout extraModuleGrid = findViewById(id.extra_modul_grid);
         extraModuleHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -133,8 +143,8 @@ public class NumberOfPlayers extends AppCompatActivity {
             }
         });
 
-        TextView detectorModuleHeader = findViewById(R.id.detector_modul_header);
-        final GridLayout detectorModuleGrid = findViewById(R.id.detector_modul_grid);
+        TextView detectorModuleHeader = findViewById(id.detector_modul_header);
+        final GridLayout detectorModuleGrid = findViewById(id.detector_modul_grid);
         detectorModuleHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -142,8 +152,8 @@ public class NumberOfPlayers extends AppCompatActivity {
             }
         });
 
-        TextView sergantModuleHeader = findViewById(R.id.sergant_modul_header);
-        final GridLayout sergantModuleGrid = findViewById(R.id.sergant_modul_grid);
+        TextView sergantModuleHeader = findViewById(id.sergant_modul_header);
+        final GridLayout sergantModuleGrid = findViewById(id.sergant_modul_grid);
         sergantModuleHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -151,8 +161,8 @@ public class NumberOfPlayers extends AppCompatActivity {
             }
         });
 
-        TextView plotModuleHeader = findViewById(R.id.plot_modul_header);
-        final GridLayout plotModuleGrid = findViewById(R.id.plot_modul_grid);
+        TextView plotModuleHeader = findViewById(id.plot_modul_header);
+        final GridLayout plotModuleGrid = findViewById(id.plot_modul_grid);
         plotModuleHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -160,9 +170,9 @@ public class NumberOfPlayers extends AppCompatActivity {
             }
         });
 
-        mTotalNumberOfPlayers = Integer.parseInt(getString(R.string.number_of_players_default_value));
+        mTotalNumberOfPlayers = Integer.parseInt(getString(string.number_of_players_default_value));
 
-        increaseTotalNumberOfPlayersButton = findViewById(R.id.increase_total_number_of_players);
+        increaseTotalNumberOfPlayersButton = findViewById(id.increase_total_number_of_players);
         increaseTotalNumberOfPlayersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -173,7 +183,7 @@ public class NumberOfPlayers extends AppCompatActivity {
             }
         });
 
-        decreaseTotalNumberOfPlayersButton = findViewById(R.id.decrease_total_number_of_players);
+        decreaseTotalNumberOfPlayersButton = findViewById(id.decrease_total_number_of_players);
         decreaseTotalNumberOfPlayersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -184,98 +194,168 @@ public class NumberOfPlayers extends AppCompatActivity {
             }
         });
 
-        totalNumberOfPlayersView = findViewById(R.id.total_number_of_players);
-        totalNumberOfHumanCharactersView = findViewById(R.id.total_number_of_human_players);
-        totalNumberOfCylonCharactersView = findViewById(R.id.total_number_of_cylon_players);
-        numberOfSimpleHumanCharactersView = findViewById(R.id.number_of_simple_human_characters);
-        numberOfSimpleCylonCharactersView = findViewById(R.id.number_of_simple_cylon_characters);
+        totalNumberOfPlayersView = findViewById(id.total_number_of_players);
+        totalNumberOfHumanCharactersView = findViewById(id.total_number_of_human_players);
+        totalNumberOfCylonCharactersView = findViewById(id.total_number_of_cylon_players);
+        numberOfSimpleHumanCharactersView = findViewById(id.number_of_simple_human_characters);
+        numberOfSimpleCylonCharactersView = findViewById(id.number_of_simple_cylon_characters);
 
+        gaiusToggleButton = findViewById(id.gaius_button);
+        aaronToggleButton = findViewById(id.aaron_button);
 
-        gaiusButton = findViewById(R.id.gaius_button);
-        gaiusButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setGaiusAndAaron();
-                setNumberOfHumanAndCylonPlayers();
-                setPlayerFields();
-
-            }
-        });
-
-        aaronButton = findViewById(R.id.aaron_button);
-        aaronButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setGaiusAndAaron();
-                setNumberOfHumanAndCylonPlayers();
-                setPlayerFields();
-            }
-        });
-
-        apolloButton = findViewById(R.id.apollo_button);
-        apolloButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setApollo();
+        gaiusToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    // The toggle is enabled
+                    aaronToggleButton.setChecked(true);
+                    mNumberOfGaiusCharacters = 1;
+                    mNumberOfAaronCharacters = 1;
+                } else {
+                    // The toggle is disabled
+                    aaronToggleButton.setChecked(false);
+                    mNumberOfGaiusCharacters = 0;
+                    mNumberOfAaronCharacters = 0;
+                }
                 setNumberOfHumanAndCylonPlayers();
                 setPlayerFields();
             }
         });
 
-        shelleyButton = findViewById(R.id.shelly_button);
-        shelleyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setShelleyAndApollo();
+        aaronToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    // The toggle is enabled
+                    gaiusToggleButton.setChecked(true);
+                    mNumberOfGaiusCharacters = 1;
+                    mNumberOfAaronCharacters = 1;
+                } else {
+                    // The toggle is disabled
+                    gaiusToggleButton.setChecked(false);
+                    mNumberOfGaiusCharacters = 0;
+                    mNumberOfAaronCharacters = 0;
+                }
                 setNumberOfHumanAndCylonPlayers();
                 setPlayerFields();
             }
         });
 
-        ashaButton = findViewById(R.id.asha_button);
-        ashaButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setAsha();
-                setNumberOfHumanAndCylonPlayers();
-                setPlayerFields();
-
-            }
-        });
-
-        dAnnaButton = findViewById(R.id.danna_button);
-        dAnnaButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setDAnna();
+        apolloToggleButton = findViewById(id.apollo_button);
+        apolloToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    // The toggle is enabled
+                    mNumberOfApolloCharacters = 1;
+                } else {
+                    // The toggle is disabled
+                    mNumberOfApolloCharacters = 0;
+                }
                 setNumberOfHumanAndCylonPlayers();
                 setPlayerFields();
             }
         });
+
+        shelleyToggleButton = findViewById(id.shelly_button);
+        shelleyToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    // The toggle is enabled
+                    apolloToggleButton.setChecked(true);
+                    mNumberOfApolloCharacters = 1;
+                    mNumberOfShelleyCharacters = 1;
+                } else {
+                    // The toggle is disabled
+                    apolloToggleButton.setChecked(false);
+                    mNumberOfApolloCharacters = 0;
+                    mNumberOfShelleyCharacters = 0;
+                }
+                setNumberOfHumanAndCylonPlayers();
+                setPlayerFields();
+            }
+        });
+
+        ashaToggleButton = findViewById(id.asha_button);
+        ashaToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    // The toggle is enabled
+                    mNumberOfAshaCharacters = 1;
+                } else {
+                    // The toggle is disabled
+                    mNumberOfAshaCharacters = 0;
+                }
+                setNumberOfHumanAndCylonPlayers();
+                setPlayerFields();
+            }
+        });
+
+        dAnnaToggleButton = findViewById(id.danna_button);
+        dAnnaToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    // The toggle is enabled
+                    mNumberOfDAnnaCharacters = 1;
+                } else {
+                    // The toggle is disabled
+                    mNumberOfDAnnaCharacters = 0;
+                }
+                setNumberOfHumanAndCylonPlayers();
+                setPlayerFields();
+            }
+        });
+
 
         /**
          * Disszidens modul buttons
          */
-        sharonBoomerValeriButton = findViewById(R.id.boomer_button);
-        sharonBoomerValeriButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setBoomerAndAthena();
+
+        sharonBoomerValeriToggleButton = findViewById(id.boomer_button);
+        sharonAthenaValeriToggleButton = findViewById(id.athena_button);
+
+        sharonBoomerValeriToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    // The toggle is enabled
+                    sharonAthenaValeriToggleButton.setChecked(true);
+                    mNumberOfSharonAthenaValeriCharacters = 1;
+                    mNumberOfSharonBoomerValeriCharacters = 1;
+                } else {
+                    // The toggle is disabled
+                    sharonAthenaValeriToggleButton.setChecked(false);
+                    mNumberOfSharonAthenaValeriCharacters = 0;
+                    mNumberOfSharonBoomerValeriCharacters = 0;
+                }
                 setNumberOfHumanAndCylonPlayers();
                 setPlayerFields();
             }
         });
 
-        sharonAthenaValeriButton = findViewById(R.id.athena_button);
-        sharonAthenaValeriButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setBoomerAndAthena();
+
+        sharonAthenaValeriToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    // The toggle is enabled
+                    sharonBoomerValeriToggleButton.setChecked(true);
+                    mNumberOfSharonAthenaValeriCharacters = 1;
+                    mNumberOfSharonBoomerValeriCharacters = 1;
+                } else {
+                    // The toggle is disabled
+                    sharonBoomerValeriToggleButton.setChecked(false);
+                    mNumberOfSharonAthenaValeriCharacters = 0;
+                    mNumberOfSharonBoomerValeriCharacters = 0;
+                }
                 setNumberOfHumanAndCylonPlayers();
                 setPlayerFields();
             }
         });
 
+
+        cylonToggleButton.add(gaiusToggleButton);
+        cylonToggleButton.add(aaronToggleButton);
+        cylonToggleButton.add(shelleyToggleButton);
+        cylonToggleButton.add(ashaToggleButton);
+        cylonToggleButton.add(dAnnaToggleButton);
+        cylonToggleButton.add(sharonAthenaValeriToggleButton);
+        cylonToggleButton.add(sharonBoomerValeriToggleButton);
 
         initCharacters(0);
         setNumberOfPlayers(0);
@@ -334,12 +414,13 @@ public class NumberOfPlayers extends AppCompatActivity {
     /**
      * Increase or decrease the number of players, and disable enable buttons depending on
      * the current value
+     *
      * @param changeValue 1, or -1 depends on the button clicked
      */
 
     private void setNumberOfPlayers(int changeValue) {
 
-        String toastText="";
+        String toastText = "";
 
         if (!totalNumberOfPlayersView.getText().toString().isEmpty()) {
             mTotalNumberOfPlayers = Integer.parseInt(totalNumberOfPlayersView.getText().toString().trim());
@@ -352,14 +433,14 @@ public class NumberOfPlayers extends AppCompatActivity {
 
         if (mTotalNumberOfPlayers < 6) {
             decreaseTotalNumberOfPlayersButton.setEnabled(false);
-            toastText=getString(R.string.minimum_number_of_players_toast);
+            toastText = getString(string.minimum_number_of_players_toast);
         }
         if (mTotalNumberOfPlayers > 11) {
             increaseTotalNumberOfPlayersButton.setEnabled(false);
-            toastText=getString(R.string.maximum_number_of_players_toast);
+            toastText = getString(string.maximum_number_of_players_toast);
         }
 
-        if (toastText.length()>0){
+        if (toastText.length() > 0) {
             Toast.makeText(this, toastText, Toast.LENGTH_SHORT).show();
         }
 
@@ -403,117 +484,25 @@ public class NumberOfPlayers extends AppCompatActivity {
                 mTotalNumberOfCylonCharacters = 4;
         }
 
-        //mTotalNumberOfHumanCharacters = mTotalNumberOfHumanCharacters - mNumberOfGaiusCharacters - mNumberOfApolloCharacters;
-        //mTotalNumberOfCylonCharacters = mTotalNumberOfCylonCharacters - mNumberOfAaronCharacters - mNumberOfShelleyCharacters - mNumberOfAshaCharacters - mNumberOfDAnnaCharacters;
-
         // Number of simple characters
 
         mNumberofSimpleHumanCharacters = mTotalNumberOfHumanCharacters - mNumberOfGaiusCharacters - mNumberOfApolloCharacters - mNumberOfSharonBoomerValeriCharacters;
         mNumberofSimpleCylonCharacters = mTotalNumberOfCylonCharacters - mNumberOfAaronCharacters - mNumberOfShelleyCharacters - mNumberOfAshaCharacters - mNumberOfDAnnaCharacters - mNumberOfSharonAthenaValeriCharacters;
-
-    }
-
-
-    private void setGaiusAndAaron() {
-        int gaiusButtonBackgroundColorId;
-        int aaronButtonBackgroundColorId;
-        if (mNumberOfGaiusCharacters == 0 && mTotalNumberOfHumanCharacters > 0 && mTotalNumberOfCylonCharacters > 0) {
-            mNumberOfGaiusCharacters = 1;
-            mNumberOfAaronCharacters = 1;
-            gaiusButtonBackgroundColorId = R.color.colorHuman;
-            aaronButtonBackgroundColorId = R.color.colorCylon;
+        if (mNumberofSimpleCylonCharacters < 1) {
+            disableButtons(cylonToggleButton);
         } else {
-            mNumberOfGaiusCharacters = 0;
-            mNumberOfAaronCharacters = 0;
-            gaiusButtonBackgroundColorId = R.color.colorPrimary;
-            aaronButtonBackgroundColorId = R.color.colorPrimary;
+            enableButtons(cylonToggleButton);
         }
 
-        setButtonBackground(gaiusButton, gaiusButtonBackgroundColorId);
-        setButtonBackground(aaronButton, aaronButtonBackgroundColorId);
     }
 
-    private void setApollo() {
-        int apolloButtonBackgroundColorId;
-        if (mNumberOfApolloCharacters == 0 && mTotalNumberOfHumanCharacters > 0 && mTotalNumberOfCylonCharacters > 0) {
-            mNumberOfApolloCharacters = 1;
-            apolloButtonBackgroundColorId = R.color.colorHuman;
-        } else {
-            mNumberOfApolloCharacters = 0;
-            apolloButtonBackgroundColorId = R.color.colorPrimary;
-        }
-        setButtonBackground(apolloButton, apolloButtonBackgroundColorId);
-    }
-
-    private void setShelleyAndApollo() {
-        int apolloButtonBackgroundColorId;
-        int shelleyButtonBackgroundColorId;
-        if (mNumberOfShelleyCharacters == 0 && mTotalNumberOfHumanCharacters > 0 && mTotalNumberOfCylonCharacters > 0) {
-            mNumberOfApolloCharacters = 1;
-            mNumberOfShelleyCharacters = 1;
-            apolloButtonBackgroundColorId = R.color.colorHuman;
-            shelleyButtonBackgroundColorId = R.color.colorCylon;
-        } else {
-            mNumberOfApolloCharacters = 0;
-            mNumberOfShelleyCharacters = 0;
-            apolloButtonBackgroundColorId = R.color.colorPrimary;
-            shelleyButtonBackgroundColorId = R.color.colorPrimary;
-        }
-        setButtonBackground(shelleyButton, shelleyButtonBackgroundColorId);
-        setButtonBackground(apolloButton, apolloButtonBackgroundColorId);
-    }
-
-    private void setAsha() {
-        int ashaButtonBackgroundColorId;
-        if (mNumberOfAshaCharacters == 0 && mTotalNumberOfCylonCharacters > 0) {
-            mNumberOfAshaCharacters = 1;
-            ashaButtonBackgroundColorId = R.color.colorLightCylon;
-        } else {
-            mNumberOfAshaCharacters = 0;
-            ashaButtonBackgroundColorId = R.color.colorPrimary;
-        }
-        setButtonBackground(ashaButton, ashaButtonBackgroundColorId);
-    }
-
-    private void setDAnna() {
-        int dAnnaButtonBackgroundColorId;
-        if (mNumberOfDAnnaCharacters == 0 && mTotalNumberOfCylonCharacters > 0) {
-            mNumberOfDAnnaCharacters = 1;
-            dAnnaButtonBackgroundColorId = R.color.colorDarkCylon;
-        } else {
-            mNumberOfDAnnaCharacters = 0;
-            dAnnaButtonBackgroundColorId = R.color.colorPrimary;
-        }
-        setButtonBackground(dAnnaButton, dAnnaButtonBackgroundColorId);
-    }
-
-    private void setBoomerAndAthena() {
-        int boomerButtonBackgroundColorId;
-        int athenaButtonBackgroundColorId;
-        if (mNumberOfSharonBoomerValeriCharacters == 0 && mTotalNumberOfHumanCharacters > 0 && mTotalNumberOfCylonCharacters > 0) {
-            mNumberOfSharonBoomerValeriCharacters = 1;
-            mNumberOfSharonAthenaValeriCharacters = 1;
-            boomerButtonBackgroundColorId = R.color.colorHuman;
-            athenaButtonBackgroundColorId = R.color.colorCylon;
-        } else {
-            mNumberOfSharonBoomerValeriCharacters = 0;
-            mNumberOfSharonAthenaValeriCharacters = 0;
-            boomerButtonBackgroundColorId = R.color.colorPrimary;
-            athenaButtonBackgroundColorId = R.color.colorPrimary;
-        }
-        setButtonBackground(sharonBoomerValeriButton, boomerButtonBackgroundColorId);
-        setButtonBackground(sharonAthenaValeriButton, athenaButtonBackgroundColorId);
-    }
-
-    private void setButtonBackground(Button playerButton, int backgroundColorId) {
-        playerButton.setBackgroundColor(getResources().getColor(backgroundColorId));
-    }
 
     private void setTotalPlayerFields() {
         totalNumberOfHumanCharactersView.setText(Integer.toString(mTotalNumberOfHumanCharacters));
         totalNumberOfCylonCharactersView.setText(Integer.toString(mTotalNumberOfCylonCharacters));
     }
-    private void setPlayerFields(){
+
+    private void setPlayerFields() {
         numberOfSimpleHumanCharactersView.setText(Integer.toString(mNumberofSimpleHumanCharacters));
         numberOfSimpleCylonCharactersView.setText(Integer.toString(mNumberofSimpleCylonCharacters));
     }
@@ -527,13 +516,19 @@ public class NumberOfPlayers extends AppCompatActivity {
         mNumberOfDAnnaCharacters = initNumberOfCharacters;
         mNumberOfSharonBoomerValeriCharacters = initNumberOfCharacters;
         mNumberOfSharonAthenaValeriCharacters = initNumberOfCharacters;
-        //tudos modul
-        setGaiusAndAaron();
-        setApollo();
-        setShelleyAndApollo();
-        setAsha();
-        setDAnna();
-        //disszidens modul
-        setBoomerAndAthena();
+    }
+
+    private void disableButtons(ArrayList<ToggleButton> buttons) {
+        for (int i = 0; i < buttons.size(); i++) {
+            if (buttons.get(i).isChecked() == false) {
+                buttons.get(i).setEnabled(false);
+            }
+        }
+    }
+
+    private void enableButtons(ArrayList<ToggleButton> buttons) {
+        for (int i = 0; i < buttons.size(); i++) {
+            buttons.get(i).setEnabled(true);
+        }
     }
 }
