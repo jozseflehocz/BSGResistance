@@ -254,6 +254,10 @@ public class NumberOfPlayers extends AppCompatActivity {
             }
         });
 
+        /**
+         * local.properties
+         */
+
         shelleyToggleButton = findViewById(id.shelly_button);
         shelleyToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
