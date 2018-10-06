@@ -58,12 +58,12 @@ public class NumberOfPlayers extends AppCompatActivity {
     /**
      * Tudos modul
      */
-    private int mNumberOfGaiusCharacters;
-    private int mNumberOfAaronCharacters;
-    private int mNumberOfApolloCharacters;
-    private int mNumberOfShelleyCharacters;
-    private int mNumberOfAshaCharacters;
-    private int mNumberOfDAnnaCharacters;
+    private int mNumberOfGaiusCharacters = 0;
+    private int mNumberOfAaronCharacters = 0;
+    private int mNumberOfApolloCharacters = 0;
+    private int mNumberOfShelleyCharacters = 0;
+    private int mNumberOfAshaCharacters = 0;
+    private int mNumberOfDAnnaCharacters = 0;
 
     /**
      * Disszidens modul
@@ -176,7 +176,6 @@ public class NumberOfPlayers extends AppCompatActivity {
         increaseTotalNumberOfPlayersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                initCharacters(1);
                 setNumberOfPlayers(1);
                 setTotalPlayerFields();
                 setPlayerFields();
@@ -187,7 +186,6 @@ public class NumberOfPlayers extends AppCompatActivity {
         decreaseTotalNumberOfPlayersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                initCharacters(1);
                 setNumberOfPlayers(-1);
                 setTotalPlayerFields();
                 setPlayerFields();
@@ -357,7 +355,6 @@ public class NumberOfPlayers extends AppCompatActivity {
         cylonToggleButton.add(sharonAthenaValeriToggleButton);
         cylonToggleButton.add(sharonBoomerValeriToggleButton);
 
-        initCharacters(0);
         setNumberOfPlayers(0);
         setTotalPlayerFields();
         setPlayerFields();
@@ -505,17 +502,6 @@ public class NumberOfPlayers extends AppCompatActivity {
     private void setPlayerFields() {
         numberOfSimpleHumanCharactersView.setText(Integer.toString(mNumberofSimpleHumanCharacters));
         numberOfSimpleCylonCharactersView.setText(Integer.toString(mNumberofSimpleCylonCharacters));
-    }
-
-    private void initCharacters(int initNumberOfCharacters) {
-        mNumberOfGaiusCharacters = initNumberOfCharacters;
-        mNumberOfAaronCharacters = initNumberOfCharacters;
-        mNumberOfApolloCharacters = initNumberOfCharacters;
-        mNumberOfShelleyCharacters = initNumberOfCharacters;
-        mNumberOfAshaCharacters = initNumberOfCharacters;
-        mNumberOfDAnnaCharacters = initNumberOfCharacters;
-        mNumberOfSharonBoomerValeriCharacters = initNumberOfCharacters;
-        mNumberOfSharonAthenaValeriCharacters = initNumberOfCharacters;
     }
 
     private void disableButtons(ArrayList<ToggleButton> buttons) {
