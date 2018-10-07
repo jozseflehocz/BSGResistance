@@ -204,61 +204,53 @@
                 android:orientation="horizontal"
                 android:rowCount="4">
 
-                <Button
+                <ToggleButton
                     android:id="@+id/williem_button"
-                    style="@style/PlayerButton.HumanButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Williem Adama" />
+                    android:textOff="Williem Adama"
+                    android:textOn="Williem Adama"
+                    android:theme="@style/AppTheme.HumanButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/cavil_b_button"
-                    style="@style/PlayerButton.CylonButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="John Cavil\n(Galaktica)" />
+                    android:textOff="John Cavil\n(Galaktica)"
+                    android:textOn="John Cavil\n(Galaktica)"
+                    android:theme="@style/AppTheme.CylonButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/laura_button"
-                    style="@style/PlayerButton.HumanButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Laura Roslin" />
+                    android:textOff="Laura Roslin"
+                    android:textOn="Laura Roslin"
+                    android:theme="@style/AppTheme.HumanButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/john_cavil_a_button"
-                    style="@style/PlayerButton.CylonButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="John Cavil\n(Caprica)" />
+                    android:textOff="John Cavil\n(Caprica)"
+                    android:textOn="John Cavil\n(Caprica)"
+                    android:theme="@style/AppTheme.CylonButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/samuel_button"
-                    style="@style/PlayerButton.HumanButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Samuel T. Anders" />
+                    android:textOff="Samuel T. Anders"
+                    android:textOn="Samuel T. Anders"
+                    android:theme="@style/AppTheme.HumanButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/tory_button"
-                    style="@style/PlayerButton.CylonButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Tory Foster" />
+                    android:textOff="Tory Foster"
+                    android:textOn="Tory Foster"
+                    android:theme="@style/AppTheme.CylonButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/tom_zarek_button"
-                    style="@style/PlayerButton.WeekHumanButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Tom Zarek" />
+                    android:textOff="Tom Zarek"
+                    android:textOn="Tom Zarek"
+                    android:theme="@style/AppTheme.HumanButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/billy_keikea_button"
-                    style="@style/PlayerButton.WeekHumanButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Billy KeiKeya" />
+                    android:textOff="Billy KeiKeya"
+                    android:textOn="Billy KeiKeya"
+                    android:theme="@style/AppTheme.HumanButton" />
 
             </GridLayout>
 

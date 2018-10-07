@@ -1,11 +1,8 @@
 package com.bsgresistance;
 
-import android.content.Context;
-import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.view.menu.MenuBuilder;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,33 +24,20 @@ public class NumberOfPlayers extends AppCompatActivity {
     Button increaseTotalNumberOfPlayersButton;
     Button decreaseTotalNumberOfPlayersButton;
 
-    /**
-     * ToggleButtons to enable/disable characters
-     */
-    ToggleButton gaiusToggleButton;
-    ToggleButton aaronToggleButton;
-    ToggleButton apolloToggleButton;
-    ToggleButton shelleyToggleButton;
-    ToggleButton ashaToggleButton;
-    ToggleButton dAnnaToggleButton;
-    ToggleButton sharonBoomerValeriToggleButton;
-    ToggleButton sharonAthenaValeriToggleButton;
-    ArrayList<ToggleButton> cylonToggleButton = new ArrayList<ToggleButton>();
-
     TextView totalNumberOfPlayersView;
     TextView totalNumberOfHumanCharactersView;
     TextView totalNumberOfCylonCharactersView;
     TextView numberOfSimpleHumanCharactersView;
     TextView numberOfSimpleCylonCharactersView;
 
-    /**
-     * Total number of players including basic and specific characters
-     */
     private int mTotalNumberOfPlayers;
     private int mTotalNumberOfHumanCharacters;
     private int mTotalNumberOfCylonCharacters;
-    private int mNumberofSimpleHumanCharacters;
-    private int mNumberofSimpleCylonCharacters;
+    ArrayList<ToggleButton> cylonToggleButton = new ArrayList<ToggleButton>();
+    ToggleButton gaiusToggleButton;
+    ToggleButton aaronToggleButton;
+    ToggleButton apolloToggleButton;
+    ToggleButton shelleyToggleButton;
 
     /**
      * Tudos modul
@@ -64,13 +48,23 @@ public class NumberOfPlayers extends AppCompatActivity {
     private int mNumberOfShelleyCharacters = 0;
     private int mNumberOfAshaCharacters = 0;
     private int mNumberOfDAnnaCharacters = 0;
-
+    ToggleButton ashaToggleButton;
+    ToggleButton dAnnaToggleButton;
+    ToggleButton sharonBoomerValeriToggleButton;
+    ToggleButton sharonAthenaValeriToggleButton;
+    private int mNumberOfSimpleHumanCharacters;
+    private int mNumberOfSimpleCylonCharacters;
+    private int mNumberOfSpecificHumanCharacters = 0;
+    private int mNumberOfSpecificCylonCharacters = 0;
     /**
      * Disszidens modul
      */
+    private int mNumberOfSharonBoomerValeriCharacters = 0;
+    private int mNumberOfSharonAthenaValeriCharacters = 0;
 
-    private int mNumberOfSharonBoomerValeriCharacters;
-    private int mNumberOfSharonAthenaValeriCharacters;
+    /** Vezeto modul
+     *
+     */
 
     /**
      * @param savedInstanceState
@@ -178,6 +172,7 @@ public class NumberOfPlayers extends AppCompatActivity {
             public void onClick(View v) {
                 setNumberOfPlayers(1);
                 setTotalPlayerFields();
+                setNumberOfHumanAndCylonPlayers();
                 setPlayerFields();
             }
         });
@@ -188,6 +183,7 @@ public class NumberOfPlayers extends AppCompatActivity {
             public void onClick(View v) {
                 setNumberOfPlayers(-1);
                 setTotalPlayerFields();
+                setNumberOfHumanAndCylonPlayers();
                 setPlayerFields();
             }
         });
@@ -208,11 +204,13 @@ public class NumberOfPlayers extends AppCompatActivity {
                     aaronToggleButton.setChecked(true);
                     mNumberOfGaiusCharacters = 1;
                     mNumberOfAaronCharacters = 1;
+                    changeNumberOfSpecificCharacters(1);
                 } else {
                     // The toggle is disabled
                     aaronToggleButton.setChecked(false);
                     mNumberOfGaiusCharacters = 0;
                     mNumberOfAaronCharacters = 0;
+                    changeNumberOfSpecificCharacters(-1);
                 }
                 setNumberOfHumanAndCylonPlayers();
                 setPlayerFields();
@@ -226,11 +224,13 @@ public class NumberOfPlayers extends AppCompatActivity {
                     gaiusToggleButton.setChecked(true);
                     mNumberOfGaiusCharacters = 1;
                     mNumberOfAaronCharacters = 1;
+                    changeNumberOfSpecificCharacters(1);
                 } else {
                     // The toggle is disabled
                     gaiusToggleButton.setChecked(false);
                     mNumberOfGaiusCharacters = 0;
                     mNumberOfAaronCharacters = 0;
+                    changeNumberOfSpecificCharacters(-1);
                 }
                 setNumberOfHumanAndCylonPlayers();
                 setPlayerFields();
@@ -260,11 +260,13 @@ public class NumberOfPlayers extends AppCompatActivity {
                     apolloToggleButton.setChecked(true);
                     mNumberOfApolloCharacters = 1;
                     mNumberOfShelleyCharacters = 1;
+                    changeNumberOfSpecificCharacters(1);
                 } else {
                     // The toggle is disabled
                     apolloToggleButton.setChecked(false);
                     mNumberOfApolloCharacters = 0;
                     mNumberOfShelleyCharacters = 0;
+                    changeNumberOfSpecificCharacters(-1);
                 }
                 setNumberOfHumanAndCylonPlayers();
                 setPlayerFields();
@@ -277,9 +279,11 @@ public class NumberOfPlayers extends AppCompatActivity {
                 if (isChecked) {
                     // The toggle is enabled
                     mNumberOfAshaCharacters = 1;
+                    changeNumberOfSpecificCylonCharacters(1);
                 } else {
                     // The toggle is disabled
                     mNumberOfAshaCharacters = 0;
+                    changeNumberOfSpecificCylonCharacters(-1);
                 }
                 setNumberOfHumanAndCylonPlayers();
                 setPlayerFields();
@@ -292,9 +296,11 @@ public class NumberOfPlayers extends AppCompatActivity {
                 if (isChecked) {
                     // The toggle is enabled
                     mNumberOfDAnnaCharacters = 1;
+                    changeNumberOfSpecificCylonCharacters(1);
                 } else {
                     // The toggle is disabled
                     mNumberOfDAnnaCharacters = 0;
+                    changeNumberOfSpecificCylonCharacters(-1);
                 }
                 setNumberOfHumanAndCylonPlayers();
                 setPlayerFields();
@@ -316,11 +322,13 @@ public class NumberOfPlayers extends AppCompatActivity {
                     sharonAthenaValeriToggleButton.setChecked(true);
                     mNumberOfSharonAthenaValeriCharacters = 1;
                     mNumberOfSharonBoomerValeriCharacters = 1;
+                    changeNumberOfSpecificCharacters(1);
                 } else {
                     // The toggle is disabled
                     sharonAthenaValeriToggleButton.setChecked(false);
                     mNumberOfSharonAthenaValeriCharacters = 0;
                     mNumberOfSharonBoomerValeriCharacters = 0;
+                    changeNumberOfSpecificCharacters(-1);
                 }
                 setNumberOfHumanAndCylonPlayers();
                 setPlayerFields();
@@ -335,11 +343,13 @@ public class NumberOfPlayers extends AppCompatActivity {
                     sharonBoomerValeriToggleButton.setChecked(true);
                     mNumberOfSharonAthenaValeriCharacters = 1;
                     mNumberOfSharonBoomerValeriCharacters = 1;
+                    changeNumberOfSpecificCharacters(1);
                 } else {
                     // The toggle is disabled
                     sharonBoomerValeriToggleButton.setChecked(false);
                     mNumberOfSharonAthenaValeriCharacters = 0;
                     mNumberOfSharonBoomerValeriCharacters = 0;
+                    changeNumberOfSpecificCharacters(-1);
                 }
                 setNumberOfHumanAndCylonPlayers();
                 setPlayerFields();
@@ -483,9 +493,14 @@ public class NumberOfPlayers extends AppCompatActivity {
 
         // Number of simple characters
 
-        mNumberofSimpleHumanCharacters = mTotalNumberOfHumanCharacters - mNumberOfGaiusCharacters - mNumberOfApolloCharacters - mNumberOfSharonBoomerValeriCharacters;
-        mNumberofSimpleCylonCharacters = mTotalNumberOfCylonCharacters - mNumberOfAaronCharacters - mNumberOfShelleyCharacters - mNumberOfAshaCharacters - mNumberOfDAnnaCharacters - mNumberOfSharonAthenaValeriCharacters;
-        if (mNumberofSimpleCylonCharacters < 1) {
+        mNumberOfSimpleHumanCharacters = mTotalNumberOfHumanCharacters - mNumberOfGaiusCharacters - mNumberOfApolloCharacters - mNumberOfSharonBoomerValeriCharacters;
+        mNumberOfSpecificCylonCharacters = mNumberOfAaronCharacters + mNumberOfShelleyCharacters + mNumberOfAshaCharacters + mNumberOfDAnnaCharacters + mNumberOfSharonAthenaValeriCharacters;
+
+        if (mTotalNumberOfCylonCharacters - mNumberOfSpecificCylonCharacters >= 0) {
+            mNumberOfSimpleCylonCharacters = mTotalNumberOfCylonCharacters - mNumberOfSpecificCylonCharacters;
+        }
+
+        if (mNumberOfSimpleCylonCharacters < 1) {
             disableButtons(cylonToggleButton);
         } else {
             enableButtons(cylonToggleButton);
@@ -493,6 +508,18 @@ public class NumberOfPlayers extends AppCompatActivity {
 
     }
 
+    private void changeNumberOfSpecificHumanCharacters(int changeValue) {
+        mNumberOfSpecificHumanCharacters += changeValue;
+    }
+
+    private void changeNumberOfSpecificCylonCharacters(int changeValue) {
+        mNumberOfSpecificCylonCharacters += changeValue;
+    }
+
+    private void changeNumberOfSpecificCharacters(int changeValue) {
+        changeNumberOfSpecificHumanCharacters(changeValue);
+        changeNumberOfSpecificCylonCharacters(changeValue);
+    }
 
     private void setTotalPlayerFields() {
         totalNumberOfHumanCharactersView.setText(Integer.toString(mTotalNumberOfHumanCharacters));
@@ -500,8 +527,8 @@ public class NumberOfPlayers extends AppCompatActivity {
     }
 
     private void setPlayerFields() {
-        numberOfSimpleHumanCharactersView.setText(Integer.toString(mNumberofSimpleHumanCharacters));
-        numberOfSimpleCylonCharactersView.setText(Integer.toString(mNumberofSimpleCylonCharacters));
+        numberOfSimpleHumanCharactersView.setText(Integer.toString(mNumberOfSimpleHumanCharacters));
+        numberOfSimpleCylonCharactersView.setText(Integer.toString(mNumberOfSimpleCylonCharacters));
     }
 
     private void disableButtons(ArrayList<ToggleButton> buttons) {
