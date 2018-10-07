@@ -1689,6 +1689,10 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorHuman</item>
+    </style><style name="AppTheme.WeekHumanButton" parent="Base.Widget.AppCompat.Button">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorLightHuman</item>
     </style><style name="AppTheme.CylonButton" parent="Base.Widget.AppCompat.Button">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -1701,6 +1705,10 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorDarkCylon</item>
+    </style><style name="AppTheme.ColorItemButton" parent="Base.Widget.AppCompat.Button">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorItem</item>
     </style><style name="NumberText">
         
         

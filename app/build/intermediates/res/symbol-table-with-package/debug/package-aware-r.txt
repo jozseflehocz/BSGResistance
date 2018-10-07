@@ -956,10 +956,12 @@ style Animation_AppCompat_Dialog
 style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
 style AppTheme
+style AppTheme_ColorItemButton
 style AppTheme_CylonButton
 style AppTheme_DarkCylonButton
 style AppTheme_HumanButton
 style AppTheme_LightCylonButton
+style AppTheme_WeekHumanButton
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog

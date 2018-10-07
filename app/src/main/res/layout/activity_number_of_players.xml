@@ -212,8 +212,8 @@
 
                 <ToggleButton
                     android:id="@+id/cavil_b_button"
-                    android:textOff="John Cavil\n(Galaktica)"
-                    android:textOn="John Cavil\n(Galaktica)"
+                    android:textOff="John Cavil (Galaktica)"
+                    android:textOn="John Cavil (Galaktica)"
                     android:theme="@style/AppTheme.CylonButton" />
 
                 <ToggleButton
@@ -224,8 +224,8 @@
 
                 <ToggleButton
                     android:id="@+id/john_cavil_a_button"
-                    android:textOff="John Cavil\n(Caprica)"
-                    android:textOn="John Cavil\n(Caprica)"
+                    android:textOff="John Cavil (Caprica)"
+                    android:textOn="John Cavil (Caprica)"
                     android:theme="@style/AppTheme.CylonButton" />
 
                 <ToggleButton
@@ -270,19 +270,17 @@
                 android:orientation="horizontal"
                 android:rowCount="1">
 
-                <Button
+                <ToggleButton
                     android:id="@+id/helo_button"
-                    style="@style/PlayerButton.HumanButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="'Helo'\nKarl Agaton" />
+                    android:textOff="'Helo' Karl Agaton"
+                    android:textOn="'Helo' Karl Agaton"
+                    android:theme="@style/AppTheme.HumanButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/simon_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    style="@style/PlayerButton.CylonButton"
-                    android:text="Simon O'neill" />
+                    android:textOff="Simon O'neill"
+                    android:textOn="Simon O'neill"
+                    android:theme="@style/AppTheme.CylonButton" />
             </GridLayout>
 
             <TextView
@@ -301,19 +299,17 @@
                 android:orientation="horizontal"
                 android:rowCount="1">
 
-                <Button
+                <ToggleButton
                     android:id="@+id/elosha_button"
-                    style="@style/PlayerButton.HumanButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Elosha Tiszteletes" />
+                    android:textOff="Elosha Tiszteletes"
+                    android:textOn="Elosha Tiszteletes"
+                    android:theme="@style/AppTheme.HumanButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/daniel_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    style="@style/PlayerButton.CylonButton"
-                    android:text="Daniell #8" />
+                    android:textOff="Daniell #8"
+                    android:textOn="Daniell #8"
+                    android:theme="@style/AppTheme.CylonButton" />
             </GridLayout>
 
             <TextView
@@ -332,33 +328,31 @@
                 android:orientation="horizontal"
                 android:rowCount="2">
 
-                <Button
+                <ToggleButton
                     android:id="@+id/cally_button"
-                    style="@style/PlayerButton.WeekHumanButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Cally Tyrol" />
+                    android:textOff="Cally Tyrol"
+                    android:textOn="Cally  Tyrol"
+                    android:theme="@style/AppTheme.WeekHumanButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/galen_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    style="@style/PlayerButton.WeekHumanButton"
-                    android:text="Galen Tyrol" />
+                    android:textOff="Galen Tyrol"
+                    android:textOn="Galen Tyrol"
+                    android:theme="@style/AppTheme.WeekHumanButton" />
+                android:text="" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/saul_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    style="@style/PlayerButton.HumanButton"
-                    android:text="Saul Tight" />
+                    android:textOff="Saul Tight"
+                    android:textOn="Saul Tight"
+                    android:theme="@style/AppTheme.HumanButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/ellen_button"
-                    style="@style/PlayerButton.CylonButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Ellen Tight" />
+                    android:textOff="Ellen Tight"
+                    android:textOn="Ellen Tight"
+                    android:theme="@style/AppTheme.CylonButton" />
+
             </GridLayout>
 
             <TextView
@@ -377,61 +371,53 @@
                 android:orientation="horizontal"
                 android:rowCount="4">
 
-                <Button
+                <ToggleButton
                     android:id="@+id/starbuck_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    style="@style/PlayerButton.HumanButton"
-                    android:text="'Starbuck'\nKara Thrace" />
+                    android:textOff="'Starbuck' Kara Thrace"
+                    android:textOn="'Starbuck' Kara Thrace"
+                    android:theme="@style/AppTheme.HumanButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/leoben_button"
-                    style="@style/PlayerButton.CylonButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Leoben Conoy" />
+                    android:textOff="Leoben Conoy"
+                    android:textOn="Leoben Conoy"
+                    android:theme="@style/AppTheme.CylonButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/felix_button"
-                    style="@style/PlayerButton.HumanButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Felix Gaeta" />
+                    android:textOff="Felix Gaeta"
+                    android:textOn="Felix Gaeta"
+                    android:theme="@style/AppTheme.HumanButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/helen_button"
-                    style="@style/PlayerButton.HumanButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Helen Kain" />
+                    android:textOff="Helen Kain"
+                    android:textOn="Helen Kain"
+                    android:theme="@style/AppTheme.HumanButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/dee_button"
-                    style="@style/PlayerButton.HumanButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="'Dee'\nAnastasia Dualla" />
+                    android:textOff="'Dee' Anastasia Dualla"
+                    android:textOn="'Dee' Anastasia Dualla"
+                    android:theme="@style/AppTheme.HumanButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/kendra_button"
-                    style="@style/PlayerButton.HumanButton"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    android:text="Kendra Shaw" />
+                    android:textOff="Kendra Shaw"
+                    android:textOn="Kendra Shaw"
+                    android:theme="@style/AppTheme.HumanButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/sherman_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    style="@style/PlayerButton.HumanButton"
-                    android:text="Dr. Sherman Cottle" />
+                    android:textOff="Dr. Sherman Cottle"
+                    android:textOn="Dr. Sherman Cottle"
+                    android:theme="@style/AppTheme.HumanButton" />
 
-                <Button
+                <ToggleButton
                     android:id="@+id/romo_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    style="@style/PlayerButton.HumanButton"
-                    android:text="Romo Lampkin" />
+                    android:textOff="Romo Lampkin"
+                    android:textOn="Romo Lampkin"
+                    android:theme="@style/AppTheme.HumanButton" />
 
             </GridLayout>
 
@@ -451,12 +437,11 @@
                 android:orientation="horizontal"
                 android:rowCount="1">
 
-                <Button
+                <ToggleButton
                     android:id="@+id/detector_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    style="@style/PlayerButton.ItemButton"
-                    android:text="Cylon Detector" />
+                    android:textOff="Cylon Detector"
+                    android:textOn="Cylon Detector"
+                    android:theme="@style/AppTheme.ColorItemButton" />
             </GridLayout>
 
             <TextView
@@ -475,12 +460,11 @@
                 android:orientation="horizontal"
                 android:rowCount="1">
 
-                <Button
+                <ToggleButton
                     android:id="@+id/sergant_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    style="@style/PlayerButton.ItemButton"
-                    android:text="Felderítő" />
+                    android:textOff="Felderítő"
+                    android:textOn="Felderítő"
+                    android:theme="@style/AppTheme.ColorItemButton" />
             </GridLayout>
 
             <TextView
@@ -499,12 +483,11 @@
                 android:orientation="horizontal"
                 android:rowCount="1">
 
-                <Button
+                <ToggleButton
                     android:id="@+id/plot_button"
-                    android:layout_gravity="left|top"
-                    android:layout_margin="25dp"
-                    style="@style/PlayerButton.ItemButton"
-                    android:text="A Terv" />
+                    android:textOff="A Terv"
+                    android:textOn="A Terv"
+                    android:theme="@style/AppTheme.ColorItemButton" />
             </GridLayout>
 
         </LinearLayout>
