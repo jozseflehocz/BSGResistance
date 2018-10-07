@@ -45,20 +45,12 @@
     </style>
 
     <style name="NumberText">
-        <!-- mi kell a számjegy középreigazításához? -->
-        <!-- layout-tal kezdődőek nem mehetnek style-ba, ha jól tudom..-->
-        <!--<item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">5dp</item>-->
         <item name="android:padding">5dp</item>
         <item name="android:width">45dp</item>
         <item name="android:textSize">25sp</item>
     </style>
 
     <style name="ModulHeaderText">
-        <!--<item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">5dp</item>-->
         <item name="android:background">@color/colorPrimary</item>
         <item name="android:paddingBottom">5dp</item>
         <item name="android:paddingLeft">5dp</item>
@@ -72,11 +64,8 @@
     </style>
 
     <style name="PlayerButton">
-        <!--<item name="android:layout_gravity">left|top</item>
-        <item name="android:layout_margin">25dp</item>-->
         <item name="android:padding">20dp</item>
         <item name="android:width">160dp</item>
-        <!--<item name="android:height">Az egységes magaságot szeretnék elérni de azt úgy tűnik nem így lehet</item>-->
         <item name="android:textSize">20sp</item>
     </style>
 
