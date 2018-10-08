@@ -62,9 +62,23 @@ public class NumberOfPlayers extends AppCompatActivity {
     private int mNumberOfSharonBoomerValeriCharacters = 0;
     private int mNumberOfSharonAthenaValeriCharacters = 0;
 
-    /** Vezeto modul
-     *
+    /**
+     * Vezeto modul
      */
+    private int mNumberOfWilliamAdamaCharacters = 0;
+    private int mNumberOfJohnCavilGalacticaCahracters = 0;
+    private int mNumberOfLauraRoslingCharacters = 0;
+    private int mNumberOfJohnCavilCapricaCharacters = 0;
+    private int mNumberOfSamuelTAndersCahracters = 0;
+    private int mNumberOfToryFosterCharacters = 0;
+    private int mNumberOfTomZarekCahracters = 0;
+    private int mNumberOfBillyKeikeyaCharacters = 0;
+
+    /**
+     * Morális modul
+     */
+    private int mNumberOfHeloKarlAgatonCharacters = 0;
+    private int mNumberOfSimonONeilCharacters = 0;
 
     /**
      * @param savedInstanceState
