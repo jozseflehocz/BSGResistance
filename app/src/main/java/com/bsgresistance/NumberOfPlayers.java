@@ -15,6 +15,7 @@ import android.widget.ToggleButton;
 
 import com.bsgresistance.bsgresistance.R;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import static com.bsgresistance.bsgresistance.R.*;
@@ -33,12 +34,13 @@ public class NumberOfPlayers extends AppCompatActivity {
     private int mTotalNumberOfPlayers;
     private int mTotalNumberOfHumanCharacters;
     private int mTotalNumberOfCylonCharacters;
-    ArrayList<ToggleButton> cylonToggleButton = new ArrayList<ToggleButton>();
     ToggleButton gaiusToggleButton;
     ToggleButton aaronToggleButton;
     ToggleButton apolloToggleButton;
     ToggleButton shelleyToggleButton;
 
+    ArrayList<ToggleButton> cylonToggleButton = new ArrayList<ToggleButton>();
+    
     /**
      * Tudos modul
      */
@@ -48,37 +50,94 @@ public class NumberOfPlayers extends AppCompatActivity {
     private int mNumberOfShelleyCharacters = 0;
     private int mNumberOfAshaCharacters = 0;
     private int mNumberOfDAnnaCharacters = 0;
-    ToggleButton ashaToggleButton;
-    ToggleButton dAnnaToggleButton;
     ToggleButton sharonBoomerValeriToggleButton;
     ToggleButton sharonAthenaValeriToggleButton;
-    private int mNumberOfSimpleHumanCharacters;
-    private int mNumberOfSimpleCylonCharacters;
-    private int mNumberOfSpecificHumanCharacters = 0;
-    private int mNumberOfSpecificCylonCharacters = 0;
+    ToggleButton williamAdamaToggleButton;
+    ToggleButton johnCavilGalacticaToggleButton;
+    ToggleButton ashaToggleButton;
+    ToggleButton dAnnaToggleButton;
+
     /**
      * Disszidens modul
      */
     private int mNumberOfSharonBoomerValeriCharacters = 0;
     private int mNumberOfSharonAthenaValeriCharacters = 0;
+    ToggleButton lauraRoslingToggleButton;
+    ToggleButton johnCavilCapricaToggleButton;
 
     /**
      * Vezeto modul
      */
     private int mNumberOfWilliamAdamaCharacters = 0;
-    private int mNumberOfJohnCavilGalacticaCahracters = 0;
+    ToggleButton samuelTAndersToggleButton;
     private int mNumberOfLauraRoslingCharacters = 0;
     private int mNumberOfJohnCavilCapricaCharacters = 0;
-    private int mNumberOfSamuelTAndersCahracters = 0;
+    ToggleButton toryFosterToggleButton;
     private int mNumberOfToryFosterCharacters = 0;
-    private int mNumberOfTomZarekCahracters = 0;
+    ToggleButton tomZarekToggleButton;
     private int mNumberOfBillyKeikeyaCharacters = 0;
+    ToggleButton billyKeikeyaToggleButton;
+    ToggleButton heloKarlAgatonToggleButton;
+    ToggleButton simonONeilToggleButton;
+    ToggleButton eloshaTiszteletesToggleButton;
+    ToggleButton danielNo8ToggleButton;
+    ToggleButton callyTyrolToggleButton;
+    ToggleButton galenTyrolToggleButton;
+    ToggleButton saulTightToggleButton;
 
     /**
      * Morális modul
      */
     private int mNumberOfHeloKarlAgatonCharacters = 0;
     private int mNumberOfSimonONeilCharacters = 0;
+    ToggleButton ellenTightToggleButton;
+    ToggleButton starbuckKarathraceToggleButton;
+    ToggleButton leobenConoyToggleButton;
+    ToggleButton felixGaetaToggleButton;
+    ToggleButton helenKainToggleButton;
+    ToggleButton deeAnastasiaDuallaToggleButton;
+    ToggleButton kendraShawToggleButton;
+    ToggleButton drShermanKottleToggleButton;
+    ToggleButton romoLampkinToggleButton;
+    ToggleButton cylonDetectorToggleButton;
+    ToggleButton felderitoToggleButton;
+    ToggleButton tervToggleButton;
+    private int mNumberOfSimpleHumanCharacters;
+    private int mNumberOfSimpleCylonCharacters;
+    private int mNumberOfSpecificHumanCharacters = 0;
+    private int mNumberOfSpecificCylonCharacters = 0;
+    private int mNumberOfJohnCavilGalacticaCharacters = 0;
+    private int mNumberOfSamuelTAndersCharacters = 0;
+    private int mNumberOfTomZarekCharacters = 0;
+    /**
+     * Hitehagyott modul
+     */
+    private int mNumberOfEloshaTiszteletes = 0;
+    private int mNumberOfDaniellNo8 = 0;
+    /**
+     * Ismerosok modul
+     */
+    private int mNumberOfCallyTyrol = 0;
+    private int mNumberOfGalenTyrol = 0;
+    private int mNumberOfSaulTight = 0;
+    private int mNumberOfEllenTight = 0;
+    /**
+     * Egyedi celok modul
+     */
+    private int mNumberOfStarbuckKarathraceCharacters = 0;
+    private int mNumberOfLeobenConoyCharacters = 0;
+    private int mNumberOfFelixGaetaCharacters = 0;
+    private int mNumberOfHelenKainCharacters = 0;
+    private int mNumberOfDeeAnastasiaDuallaCharacters = 0;
+    private int mNumberOfKendraShawCharacters = 0;
+    private int mNumberOfDrShermanKottleCharacters = 0;
+    private int mNumberOfRomoLampkinCharacters = 0;
+    //Cylon detecor modul
+    private boolean isCylonDetectorEnabled = false;
+    //Felderito modul
+    private boolean isFelderitoEnabled = false;
+    //A Terv module
+    private boolean isTervEnabled = false;
 
     /**
      * @param savedInstanceState
@@ -208,6 +267,8 @@ public class NumberOfPlayers extends AppCompatActivity {
         numberOfSimpleHumanCharactersView = findViewById(id.number_of_simple_human_characters);
         numberOfSimpleCylonCharactersView = findViewById(id.number_of_simple_cylon_characters);
 
+
+        //Tudos modul buttons
         gaiusToggleButton = findViewById(id.gaius_button);
         aaronToggleButton = findViewById(id.aaron_button);
 
